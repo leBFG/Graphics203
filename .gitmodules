@@ -1,0 +1,4 @@
+[submodule "skateboard"]
+	path = skateboard_engine
+	url = https://github.com/Abertay-University-SDI/skateboard_engine_2024
+	branch = EngineRefactor

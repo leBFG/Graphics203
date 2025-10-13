@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard">
+      <UniqueIdentifier>{7CE83EC5-68B6-32CB-514A-A3F13DB70E30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Assets">
+      <UniqueIdentifier>{DE4B3F8E-4AB8-FA88-13AC-92E67FD71CF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\ImGui">
+      <UniqueIdentifier>{A6CA0ABF-9259-9488-3B78-A88327E6A42E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Memory">
+      <UniqueIdentifier>{64BC3CA9-D028-F8A3-991C-900105481A0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer">
+      <UniqueIdentifier>{A2772D8A-0EAF-7521-17B9-D944836F9C1A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer\Api">
+      <UniqueIdentifier>{CB619F4D-376F-CD33-C055-C91E2C6299EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer\Lights">
+      <UniqueIdentifier>{5CD609AC-48FC-D312-3142-59DE1D07F9DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer\Materials">
+      <UniqueIdentifier>{F3ECEF84-5F5B-4504-A844-000414F23AA0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Scene">
+      <UniqueIdentifier>{99C2BABF-8551-4489-2E70-58841ADE542F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\frankluna">
+      <UniqueIdentifier>{84580C6D-7051-2BBF-9983-104485DB0ACB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Input">
+      <UniqueIdentifier>{01290a56-2ce1-4b95-a93a-138b6c828b55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Memory\Allocators">
+      <UniqueIdentifier>{b2ff035d-5847-4f9d-b13b-eda526fea497}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Skateboard.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Application.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Assets\AssetManager.h">
+      <Filter>src\Skateboard\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Camera\Camera.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Core.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\EntryPoint.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\ImGui\ImGuiLayer.h">
+      <Filter>src\Skateboard\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Layer.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\LayerStack.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Log.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Mathematics.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Memory\DescriptorTable.h">
+      <Filter>src\Skateboard\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Memory\MemoryManager.h">
+      <Filter>src\Skateboard\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Platform.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Graphics\Resources\Buffer.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Graphics\RHI\GraphicsContext.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Graphics\InternalFormats.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Graphics\Resources\Pipeline.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\RenderInstruction.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderers\Renderer.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\AABB.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\Components.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\Entity.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\Scene.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\SceneBuilder.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\SizedPtr.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sktbdpch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\frankluna\Timer.h">
+      <Filter>vendor\frankluna</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\ImGui\backends\Playstation\imgui.h" />
+    <ClInclude Include="src\Skateboard\Assets\Model\Model.h" />
+    <ClInclude Include="src\Skateboard\Graphics\RHI\RenderCommand.h" />
+    <ClInclude Include="src\Skateboard\Assets\Model\Span.h" />
+    <ClInclude Include="src\Skateboard\Camera\CameraController.h" />
+    <ClInclude Include="src\Platform\AGC\Model\helper code\libScePackParser\array.h" />
+    <ClInclude Include="src\Platform\AGC\Model\helper code\libScePackParser\error_codes.h" />
+    <ClInclude Include="src\Platform\AGC\Model\helper code\libScePackParser\material_models.h" />
+    <ClInclude Include="src\Platform\AGC\Model\helper code\libScePackParser\pack_file.h" />
+    <ClInclude Include="src\Skateboard\Utilities\StringConverters.h" />
+    <ClInclude Include="src\Skateboard\Time\TimeManager.h" />
+    <ClInclude Include="src\Skateboard\Events\Event.h" />
+    <ClInclude Include="src\Skateboard\Events\AppEvents.h" />
+    <ClInclude Include="src\Skateboard\Events\KeyEvent.h" />
+    <ClInclude Include="src\Skateboard\Events\MouseEvent.h" />
+    <ClInclude Include="src\Skateboard\Events\GamePadEvent.h" />
+    <ClInclude Include="src\Skateboard\Renderers\Animation\SkeletalData\SkeletalData.h" />
+    <ClInclude Include="src\Skateboard\Renderers\Animation\Animator2D\Animator2D.h" />
+    <ClInclude Include="src\Skateboard\Renderers\Animation\Animation.h" />
+    <ClInclude Include="src\Skateboard\Utilities\StringId.h" />
+    <ClInclude Include="src\Skateboard\Utilities\CRC.h" />
+    <ClInclude Include="src\Skateboard\Renderers\Animation\Animator\Animator.h" />
+    <ClInclude Include="src\Skateboard\Audio\Api\AudioRendererAPI.h" />
+    <ClInclude Include="src\Skateboard\Audio\AudioFile.h" />
+    <ClInclude Include="src\Skateboard\Audio\AudioRenderer.h" />
+    <ClInclude Include="src\Skateboard\Audio\Platforms\Playstation\AudioStream.h" />
+    <ClInclude Include="src\Skateboard\Scene\ECS.h" />
+    <ClInclude Include="src\Skateboard\Scene\BaseNativeScript.h" />
+    <ClInclude Include="src\Skateboard\User.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Input.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Input\ActionBinding.h">
+      <Filter>src\Skateboard\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Input\DeviceManager.h">
+      <Filter>src\Skateboard\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Graphics\RHI\ResourceFactory.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Graphics\Resources\GPUResource.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Memory\VirtualAllocator.h">
+      <Filter>src\Skateboard\Memory\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Graphics\RHI\GraphicsSettingsDefines.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Graphics\Resources\View.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Graphics\Resources\CommonResources.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\vendor\microsoft\LoaderHelpers.h" />
+    <ClInclude Include="src\Platform\DirectX12\vendor\microsoft\PlatformHelpers.h" />
+    <ClInclude Include="vendor\simdjson\simdjson.h" />
+    <ClInclude Include="src\Skateboard\ComponentSystems\Scripts\PlayerControllerScript.h" />
+    <ClInclude Include="src\Skateboard\ComponentSystems\Systems\BaseSystem.h" />
+    <ClInclude Include="src\Platform\DirectX12\ApiHandles.h" />
+    <ClInclude Include="src\Skateboard\Graphics\Resources\CommandBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Skateboard\Application.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Assets\AssetManager.cpp">
+      <Filter>src\Skateboard\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Camera\Camera.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\ImGui\ImGuiLayer.cpp">
+      <Filter>src\Skateboard\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\LayerStack.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Memory\MemoryManager.cpp">
+      <Filter>src\Skateboard\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Graphics\Resources\Buffer.cpp">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Graphics\InternalFormats.cpp">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Graphics\Resources\Pipeline.cpp">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Scene\Components.cpp">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Scene\Entity.cpp">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Scene\Scene.cpp">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Scene\SceneBuilder.cpp">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sktbdpch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\frankluna\Timer.cpp">
+      <Filter>vendor\frankluna</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Memory\DescriptorTable.cpp" />
+    <ClCompile Include="src\Skateboard\Assets\Model\Model.cpp" />
+    <ClCompile Include="src\Skateboard\Camera\CameraController.cpp" />
+    <ClCompile Include="src\Skateboard\Time\TimeManager.cpp" />
+    <ClCompile Include="src\Skateboard\Renderers\Animation\Animation.cpp" />
+    <ClCompile Include="src\Skateboard\Utilities\StringId.cpp" />
+    <ClCompile Include="src\Skateboard\Utilities\CRC.cpp" />
+    <ClCompile Include="src\Skateboard\Renderers\Animation\SkeletalData\SkeletalData.cpp" />
+    <ClCompile Include="src\Skateboard\Renderers\Animation\Animator\Animator.cpp" />
+    <ClCompile Include="src\Skateboard\Audio\Api\AudioRendererAPI.cpp" />
+    <ClCompile Include="src\Skateboard\Audio\AudioFile.cpp" />
+    <ClCompile Include="src\Skateboard\Audio\AudioRenderer.cpp" />
+    <ClCompile Include="src\Skateboard\Audio\Platforms\Playstation\AudioStream.cpp" />
+    <ClCompile Include="src\Skateboard\Scene\ECS.cpp" />
+    <ClCompile Include="src\Skateboard\User.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Input.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Input\ActionBinding.cpp">
+      <Filter>src\Skateboard\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Memory\VirtualAllocator.cpp">
+      <Filter>src\Skateboard\Memory\Allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\simdjson\simdjson.cpp" />
+    <ClCompile Include="src\Skateboard\ComponentSystems\Scripts\PlayerControllerScript.cpp" />
+  </ItemGroup>
+</Project>

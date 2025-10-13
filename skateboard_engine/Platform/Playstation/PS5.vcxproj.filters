@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;cc;s;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;pssli</Extensions>
+    </Filter>
+    <Filter Include="Shader Files">
+      <UniqueIdentifier>{5FAE8098-8EE5-44A0-ABB6-C797B807CDE6}</UniqueIdentifier>
+      <Extensions>pssl;scu</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PlaystationPlatform\PlaystationDeviceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\PlaystationPlatform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\PlaystationTimeManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\PlaystationUserManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\Animation\AGCAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\Animation\AGCAnimator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\Animation\AGCSkeletalData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\Model\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\AGCAssetManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\AGCBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\AGCPipeline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\ShaderResourceTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\RHI\AGCGraphicsContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\RHI\AGCRenderingApi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\AGCTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\ImGui\imgui_libfont_ps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Memory\AGCDescriptorTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Memory\AGCMemoryAllocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Renderers\MeshletPipeline\AGCMeshletPipeline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\AGCCommandBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\AGCView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\RHI\AGCResourceFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\AGC\ImGui\ImGuiCompile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\PlaystationLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaystationPlatform\Audio\ScreamAudioRendererAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PlaystationPlatform\PlaystationLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\PlaystationDeviceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\PlaystationPlatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\PlaystationTimeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\PlaystationUserManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\Animation\AGCAnimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\Animation\AGCAnimator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\Animation\AGCSkeletalData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\Model\Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\AGCAssetManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\AGCBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\AGCPipeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\ShaderResourceTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\RHI\AGCGraphicsContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\RHI\AGCRenderingApi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\AGCF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\AGCTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps_shader_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\ImGui\imgui_libfont_ps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Memory\AGCDescriptorTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Memory\AGCMemoryAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Renderers\MeshletPipeline\AGCMeshletPipeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\vendor\Jolt\PlatformBlue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\AGCCommandBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\AGCView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\RHI\AGCResourceFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\PS5.pch">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\API\AGCDescriptorHeap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\Audio\ScreamAudioRendererAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <WavePsslc Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps_shader_p.pssl">
+      <Filter>Shader Files</Filter>
+    </WavePsslc>
+    <WavePsslc Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps_shader_vv.pssl">
+      <Filter>Shader Files</Filter>
+    </WavePsslc>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sharedprops.props" />
+  </ItemGroup>
+</Project>

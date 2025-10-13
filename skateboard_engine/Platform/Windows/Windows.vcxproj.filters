@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_1.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_2.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_3.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_4.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_5.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_6.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_7.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_8.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_9.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_10.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_11.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_12.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_13.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_14.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_a.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_b.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_c.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_d.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_e.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\all_f.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\classes_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\classes_1.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\classes_2.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\classes_3.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\classes_4.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\classes_5.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\classes_6.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\defines_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\enums_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\enums_1.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\enums_2.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\enums_3.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\enumvalues_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\enumvalues_1.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\enumvalues_2.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\enumvalues_3.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\files_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\functions_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\functions_1.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\functions_2.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\functions_3.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\functions_4.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\functions_5.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\functions_6.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\functions_7.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\functions_8.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\namespaces_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\nomatches.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\pages_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\pages_1.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\pages_2.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\pages_3.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\pages_4.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\pages_5.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\pages_6.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\pages_7.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\related_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\related_1.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\typedefs_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\typedefs_1.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_0.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_1.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_2.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_3.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_4.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_5.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_6.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_7.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_8.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_9.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_a.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_b.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_c.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\search\variables_d.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\_d3_d12_mem_alloc_8h.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\annotated.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_allocation.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_allocation-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_allocator.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_allocator-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_defragmentation_context.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_defragmentation_context-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_pool.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_pool-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_virtual_block.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\class_d3_d12_m_a_1_1_virtual_block-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\classes.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\configuration.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\custom_pools.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\defragmentation.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\dir_d44c64559bbebec7f509842c48db8b23.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\doxygen_crawl.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\files.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\functions.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\functions_func.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\functions_rela.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\functions_vars.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\general_considerations.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\globals.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\globals_defs.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\hierarchy.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\index.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\linear_algorithm.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\namespace_d3_d12_m_a.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\namespacemembers.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\namespacemembers_enum.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\namespacemembers_eval.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\namespacemembers_func.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\namespacemembers_type.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\namespaces.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\pages.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\quick_start.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\resource_aliasing.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\statistics.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___c_a_l_l_b_a_c_k_s.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___c_a_l_l_b_a_c_k_s-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___d_e_s_c.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_o_r___d_e_s_c.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_o_r___d_e_s_c-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_budget.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_budget-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___d_e_s_c.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___d_e_s_c-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___m_o_v_e.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___m_o_v_e-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___p_a_s_s___m_o_v_e___i_n_f_o.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___p_a_s_s___m_o_v_e___i_n_f_o-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___s_t_a_t_s.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___s_t_a_t_s-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_detailed_statistics.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_detailed_statistics-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_p_o_o_l___d_e_s_c.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_p_o_o_l___d_e_s_c-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_statistics.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_statistics-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_total_statistics.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_total_statistics-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___i_n_f_o.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___i_n_f_o-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_virtual_allocation.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\struct_d3_d12_m_a_1_1_virtual_allocation-members.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\docs\html\virtual_allocator.html" />
+    <None Include="WindowsPlatform\DirectX12\vendor\microsoft\DXIL\GenerateMips_main.inc">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\include\D3D12MemAlloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\vendor\microsoft\DDS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\vendor\microsoft\DDSTextureLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\vendor\microsoft\DirectXHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\vendor\microsoft\GraphicsMemory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\vendor\microsoft\LinearAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\vendor\microsoft\LoaderHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\vendor\microsoft\PlatformHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\vendor\microsoft\ResourceUploadBatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\WindowsUserManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\WindowsDeviceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\WindowsPlatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\WindowsTimeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\ImGui\imgui_impl_dx12.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\D3DDebugTools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Assets\D3DAssetManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\API\D3DDescriptorHeap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\API\D3DDescriptorTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\API\UploadManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\Resources\D3DPipeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\Resources\D3DBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\Resources\D3DCommandBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\Resources\D3DView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\RHI\D3DGraphicsContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\RHI\D3DRenderCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\RHI\D3DResourceFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\D3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\D3DTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\DirectX12\Graphics\d3dx12.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\ImGui\imgui_impl_win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\vendor\fastgltf\include\fastgltf\base64.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\vendor\fastgltf\include\fastgltf\core.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\vendor\fastgltf\include\fastgltf\dxmath_element_traits.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\vendor\fastgltf\include\fastgltf\glm_element_traits.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\vendor\fastgltf\include\fastgltf\math.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\vendor\fastgltf\include\fastgltf\tools.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\vendor\fastgltf\include\fastgltf\types.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\vendor\fastgltf\include\fastgltf\util.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\WindowsLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsPlatform\windowspch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\src\D3D12MemAlloc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\vendor\microsoft\DDSTextureLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\vendor\microsoft\DirectXHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\vendor\microsoft\GraphicsMemory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\vendor\microsoft\LinearAllocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\vendor\microsoft\ResourceUploadBatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\WindowsDeviceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\WindowsPlatform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\WindowsTimeManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\WindowsUserManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\ImGui\imgui_impl_dx12.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\D3DDebugTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Assets\D3DAssetManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\API\D3DDescriptorHeap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\API\D3DDescriptorTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\API\UploadManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\Resources\D3DBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\Resources\D3DCommandBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\Resources\D3DPipeline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\Resources\D3DView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\RHI\D3DGraphicsContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\RHI\D3DRenderCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\RHI\D3DResourceFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\DirectX12\Graphics\D3DTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\ImGui\imgui_impl_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\ImGui\ImGuiCompile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\vendor\fastgltf\src\base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\vendor\fastgltf\src\fastgltf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\vendor\fastgltf\src\io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsPlatform\WindowsLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="WindowsPlatform\DirectX12\vendor\D3D12MemoryAllocator\src\D3D12MemAlloc.natvis" />
+  </ItemGroup>
+</Project>

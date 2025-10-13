@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <PS5ProjectDir>$(MSBuildThisFileDirectory)</PS5ProjectDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PS5BatchDir>$(MSBuildThisFileDirectory)batch\</PS5BatchDir>
+  </PropertyGroup>
+</Project>

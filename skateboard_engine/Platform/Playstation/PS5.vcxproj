@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Prospero">
+      <Configuration>Debug</Configuration>
+      <Platform>Prospero</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Prospero">
+      <Configuration>Release</Configuration>
+      <Platform>Prospero</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Ship|Prospero">
+      <Configuration>Ship</Configuration>
+      <Platform>Prospero</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{fe6bda68-6cd4-4be9-9164-ec133c6fc9a8}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Prospero'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Prospero'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Ship|Prospero'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Ship|Win32'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(DebuggerFlavor)'=='ProsperoDebugger'" Label="OverrideDebuggerDefaults">
+    <!--LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand-->
+    <!--LocalDebuggerCommandArguments></LocalDebuggerCommandArguments-->
+    <!--LocalDebuggerTarget></LocalDebuggerTarget-->
+    <!--LocalDebuggerWorkingDirectory>$(ProjectDir)</LocalDebuggerWorkingDirectory-->
+    <!--LocalRunCommandLine></LocalRunCommandLine-->
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.props')" Project="$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Prospero'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\EngineSourceProperties.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Prospero'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\EngineSourceProperties.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Ship|Prospero'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\EngineSourceProperties.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Prospero'">
+    <OutDir>$(ProjectDir)Binary\$(Configuration)-$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)Intermediate\$(Configuration)-$(Platform)\</IntDir>
+    <IncludePath>$(SCE_PROSPERO_SDK_DIR)\host_tools\lib\clang\include;$(SCE_PROSPERO_SDK_DIR)\host_tools\edge\include;$(SCE_PROSPERO_SDK_DIR)\target\include;$(SCE_PROSPERO_SDK_DIR)\target\include_common</IncludePath>
+    <LibraryPath>$(SCE_PROSPERO_SDK_DIR)\host_tools\lib;</LibraryPath>
+    <SourcePath>$(SCE_PROSPERO_SDK_DIR)\host_tools\edge\src\edge\libedgeanimtool;$(SourcePath)</SourcePath>
+    <UndefinedBehavior>Recover</UndefinedBehavior>
+    <AddressSanitizer>Recover</AddressSanitizer>
+    <ThreadSanitizer>Off</ThreadSanitizer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Prospero'">
+    <OutDir>$(ProjectDir)Binary\$(Configuration)-$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)Intermediate\$(Configuration)-$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Ship|Prospero'">
+    <OutDir>$(ProjectDir)Binary\$(Configuration)-$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)Intermediate\$(Configuration)-$(Platform)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Prospero'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG; SKTBD_DEBUG; JPH_PLATFORM_BLUE; %(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <CppLanguageStd>Gnupp20</CppLanguageStd>
+      <CLanguageStd>Gnu17</CLanguageStd>
+      <AdditionalIncludeDirectories>$(ProjectDir)PlaystationPlatform;$(ProjectDir)PlaystationPlatform\Platform\vendor;$(SKTBD_ENGINE_INCLUDES);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExtendedDiagnostics>true</ExtendedDiagnostics>
+    </ClCompile>
+    <Link>
+      <Addressing>NonAslr</Addressing>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /Y /I "$(SCE_PROSPERO_SDK_DIR)\target\sce_module\libc.prx" "$(GAME_EXE_DIR)sce_module\"
+::xcopy /Y /I "$(SolutionDir)config\imgui.ini" "$(GAME_EXE_DIR)"</Command>
+    </PostBuildEvent>
+    <ProjectReference />
+    <Lib>
+      <AdditionalDependencies>$(ProjectDir)PlaystationPlatform\vendor\model-loading\lib\libScePackParser.a;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Prospero'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG; SKTBD_RELEASE; JPH_PLATFORM_BLUE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <CppLanguageStd>Gnupp20</CppLanguageStd>
+      <CLanguageStd>Gnu17</CLanguageStd>
+      <AdditionalIncludeDirectories>$(ProjectDir)PlaystationPlatform;$(ProjectDir)PlaystationPlatform\Platform\vendor;$(SKTBD_ENGINE_INCLUDES);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>$(ProjectDir)PlaystationPlatform\vendor\model-loading\lib\libScePackParser.a;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Ship|Prospero'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <CppLanguageStd>Gnupp20</CppLanguageStd>
+      <CLanguageStd>Gnu17</CLanguageStd>
+      <AdditionalIncludeDirectories>$(ProjectDir)PlaystationPlatform;$(ProjectDir)PlaystationPlatform\Platform\vendor;$(SKTBD_ENGINE_INCLUDES);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>$(ProjectDir)PlaystationPlatform\vendor\model-loading\lib\libScePackParser.a;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\RHI\AGCResourceFactory.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\AGCView.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\AGCCommandBuffer.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\AGCAssetManager.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\Animation\AGCAnimation.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\Animation\AGCAnimator.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\Animation\AGCSkeletalData.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Assets\Model\Utils.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\AGCTypes.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\AGCBuffer.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\AGCPipeline.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\Resources\ShaderResourceTable.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\RHI\AGCGraphicsContext.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Graphics\RHI\AGCRenderingApi.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\ImGui\imgui_libfont_ps.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\ImGui\ImGuiCompile.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Memory\AGCDescriptorTable.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Memory\AGCMemoryAllocator.cpp" />
+    <ClCompile Include="PlaystationPlatform\AGC\Renderers\MeshletPipeline\AGCMeshletPipeline.cpp" />
+    <ClCompile Include="PlaystationPlatform\Audio\ScreamAudioRendererAPI.cpp" />
+    <ClCompile Include="PlaystationPlatform\PlaystationDeviceManager.cpp" />
+    <ClCompile Include="PlaystationPlatform\PlaystationLog.cpp" />
+    <ClCompile Include="PlaystationPlatform\PlaystationPlatform.cpp" />
+    <ClCompile Include="PlaystationPlatform\PlaystationTimeManager.cpp" />
+    <ClCompile Include="PlaystationPlatform\PlaystationUserManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\API\AGCDescriptorHeap.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\RHI\AGCResourceFactory.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\AGCView.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\AGCCommandBuffer.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\AGCAssetManager.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\Animation\AGCAnimation.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\Animation\AGCAnimator.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\Animation\AGCSkeletalData.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Assets\Model\Utils.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\AGCF.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\AGCTypes.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\AGCBuffer.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\AGCPipeline.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\Resources\ShaderResourceTable.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\RHI\AGCGraphicsContext.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Graphics\RHI\AGCRenderingApi.h" />
+    <ClInclude Include="PlaystationPlatform\Audio\ScreamAudioRendererAPI.h" />
+    <ClInclude Include="PlaystationPlatform\PS5.pch">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Prospero'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps_shader_common.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\ImGui\imgui_libfont_ps.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Memory\AGCDescriptorTable.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Memory\AGCMemoryAllocator.h" />
+    <ClInclude Include="PlaystationPlatform\AGC\Renderers\MeshletPipeline\AGCMeshletPipeline.h" />
+    <ClInclude Include="PlaystationPlatform\PlaystationDeviceManager.h" />
+    <ClInclude Include="PlaystationPlatform\PlaystationLog.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Prospero'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Prospero'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Ship|Prospero'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="PlaystationPlatform\PlaystationPlatform.h" />
+    <ClInclude Include="PlaystationPlatform\PlaystationTimeManager.h" />
+    <ClInclude Include="PlaystationPlatform\PlaystationUserManager.h" />
+    <ClInclude Include="PlaystationPlatform\vendor\Jolt\PlatformBlue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <WavePsslc Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps_shader_p.pssl">
+      <Embed Condition="'$(Configuration)|$(Platform)'=='Debug|Prospero'">true</Embed>
+    </WavePsslc>
+    <WavePsslc Include="PlaystationPlatform\AGC\ImGui\imgui_impl_ps_shader_vv.pssl">
+      <Embed Condition="'$(Configuration)|$(Platform)'=='Debug|Prospero'">true</Embed>
+    </WavePsslc>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sharedprops.props" />
+  </ItemGroup>
+  <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.targets')" Project="$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.targets" />
+  </ImportGroup>
+</Project>

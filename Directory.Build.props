@@ -1,0 +1,18 @@
+<Project>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Prospero'">
+    <ClCompile>
+      <CppLanguageStd>Gnupp20</CppLanguageStd>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Prospero' and '$(DesignTimeBuild)' == 'true'">
+    <ClCompile>
+      <ForcedIncludeFiles>%(ClCompile.ForcedIncludeFiles);$(MSBuildThisFileDirectory)\define_libc_cxx.h</ForcedIncludeFiles>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <PropertyGroup Condition="'$(Platform)'=='Prospero' and '$(DesignTimeBuild)' == 'true'">
+    <NoStandardIncludePaths>true</NoStandardIncludePaths>
+    <IncludePath>$(SCE_PROSPERO_SDK_DIR)\host_tools\lib\clang\include;$(SCE_PROSPERO_SDK_DIR)\target\include\_cxxvers\facade;$(SCE_PROSPERO_SDK_DIR)\target\include;$(SCE_PROSPERO_SDK_DIR)\target\include\_cxxvers\v2;$(SCE_PROSPERO_SDK_DIR)\target\include_common</IncludePath>
+  </PropertyGroup>
+</Project>

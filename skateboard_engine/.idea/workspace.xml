@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0aa0498f-8b6b-412b-b6aa-878c4ca7da9e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Skateboard/Skateboard.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/Skateboard.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/Skateboard.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/Skateboard.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationGamePadManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationGamePadManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationGamePadManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationGamePadManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationInputs.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationInputs.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationPlatform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationPlatform.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationPlatform.h" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Platform/Playstation/PlaystationPlatform.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Platform/Windows/WindowsInput.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Platform/Windows/WindowsInput.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Platform/Windows/WindowsPlatform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Platform/Windows/WindowsPlatform.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Skateboard.h" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Skateboard.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Skateboard/Application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Skateboard/Application.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Skateboard/Events/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Skateboard/Events/Event.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Skateboard/Input.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Skateboard/Input.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Skateboard/Input.h" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Skateboard/Input.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Skateboard/Platform.h" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Skateboard/Platform.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Skateboard/Renderer/Model/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Skateboard/Renderer/Model/Model.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/src/Skateboard/Renderer/Renderer3D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/src/Skateboard/Renderer/Renderer3D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/vendor/Box2D/Box2D.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/vendor/Box2D/Box2D.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skateboard/vendor/Box2D/Box2D.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Skateboard/vendor/Box2D/Box2D.vcxproj.filters" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\SDI\Documents\AlessandroLoddo\skateboard_engine\skateboard_engine_208\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2ZOO4x4qKq8r5yNbMcHX87U48TV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0aa0498f-8b6b-412b-b6aa-878c4ca7da9e" name="Default Changelist" comment="" />
+      <created>1702289471518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702289471518</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="656" y="340" key="com.intellij.ide.util.TipDialog" timestamp="1705924785114">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="656" y="340" key="com.intellij.ide.util.TipDialog/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1705924785114" />
+  </component>
+</project>

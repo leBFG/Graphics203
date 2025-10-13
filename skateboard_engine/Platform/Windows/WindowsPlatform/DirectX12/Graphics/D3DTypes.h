@@ -1,0 +1,39 @@
+#pragma once
+
+#include "Skateboard/Graphics/InternalFormats.h"
+#include "DirectX12/Graphics/D3D.h"
+
+typedef enum D3D12_RAYTRACING_GEOMETRY_TYPE D3D12_RAYTRACING_GEOMETRY_TYPE;
+typedef enum D3D12_RAYTRACING_GEOMETRY_FLAGS D3D12_RAYTRACING_GEOMETRY_FLAGS;
+typedef enum D3D12_HIT_GROUP_TYPE D3D12_HIT_GROUP_TYPE;
+typedef enum DXGI_FORMAT DXGI_FORMAT;
+typedef enum D3D12_RESOURCE_STATES D3D12_RESOURCE_STATES;
+typedef enum D3D12_SHADER_VISIBILITY D3D12_SHADER_VISIBILITY;
+typedef enum D3D12_FILTER D3D12_FILTER;
+typedef enum D3D12_TEXTURE_ADDRESS_MODE D3D12_TEXTURE_ADDRESS_MODE;
+typedef enum D3D12_COMPARISON_FUNC D3D12_COMPARISON_FUNC;
+typedef enum D3D12_STATIC_BORDER_COLOR D3D12_STATIC_BORDER_COLOR;
+typedef enum D3D12_DESCRIPTOR_HEAP_TYPE D3D12_DESCRIPTOR_HEAP_TYPE;
+typedef enum D3D12_DESCRIPTOR_RANGE_TYPE D3D12_DESCRIPTOR_RANGE_TYPE;
+typedef enum D3D12_RESOURCE_DIMENSION D3D12_RESOURCE_DIMENSION;
+
+namespace Skateboard
+{
+	D3D12_RESOURCE_DIMENSION SkateboardTextureDimensionToD3D(TextureDimension_ dimension);
+	D3D12_RAYTRACING_GEOMETRY_TYPE GeometryTypeToD3D(GeometryType_ type);
+	D3D12_RAYTRACING_GEOMETRY_FLAGS GeometryFlagsToD3D(GeometryFlags_ type);
+	D3D12_HIT_GROUP_TYPE RaytracingHitGroupTypeToD3D(RaytracingHitGroupType_ type);
+	DXGI_FORMAT ShaderDataTypeToD3D(ShaderDataType_ type);
+	D3D12_SHADER_VISIBILITY ShaderVisibilityToD3D(ShaderVisibility_ v);
+	D3D12_DESCRIPTOR_HEAP_TYPE ShaderDescriptorTableTypeToD3D(ShaderDescriptorTableType_ type);
+	D3D12_DESCRIPTOR_RANGE_TYPE ShaderElementTypeToD3DDescriptorRange(ShaderElementType_ type);
+	D3D12_FILTER SamplerFilterToD3D(SamplerFilter_ filter);
+	D3D12_TEXTURE_ADDRESS_MODE SamplerModeToD3D(SamplerMode_ mode);
+	D3D12_COMPARISON_FUNC SamplerComparisonFunctionToD3D(SamplerComparisonFunction_ function);
+	D3D12_STATIC_BORDER_COLOR SamplerBorderColourToD3D(SamplerBorderColour_ colour);
+	DXGI_FORMAT DepthStencilToSRVD3D(DataFormat_ format);
+	DXGI_FORMAT SkateboardBufferFormatToD3D(DataFormat_ format);
+	DataFormat_ D3DBufferFormatToSkateboard(DXGI_FORMAT format);
+
+//	D3D12_RESOURCE_STATES ResourceTypeToStateD3D(GPUResourceType_ type);
+}

@@ -1,0 +1,31 @@
+struct VertexOutput
+{
+	float4 position : S_POSITION;
+	float2 uv : TEXCOORD0;
+};
+
+ConstantBuffer ColorBuffer : b0
+{
+	float4 color;
+};
+
+Texture2D<float4> inputTexture : register(t0, space0);
+SamplerState sampler : register(s0, space0);
+
+SrtSignature gSignature
+{
+	CBV(b0),
+	SRV(t0),
+	Sampler(s0),
+}
+
+[SrtSignature(gSignature)]
+float4 main(VertexOutput input) : S_TARGET_OUTPUT0
+{
+	float4 ret = inputTexture.Sample(sampler, input.uv) * color;
+	//if (ret.a == 0)
+	//	discard;
+	//ret = color;
+
+	return ret;
+}

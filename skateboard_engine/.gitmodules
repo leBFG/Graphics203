@@ -1,0 +1,6 @@
+[submodule "Skateboard/vendor/imgui"]
+	path = Skateboard/vendor/imgui
+	url = https://github.com/ocornut/imgui
+[submodule "Skateboard/vendor/glm"]
+	path = Skateboard/vendor/glm
+	url = https://github.com/g-truc/glm.git

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <SKTBD_ENGINE_DIR>$(SolutionDir)skateboard_engine</SKTBD_ENGINE_DIR>
+    <SKTBD_PLATFORM_DIR>$(SKTBD_ENGINE_DIR)\Platform</SKTBD_PLATFORM_DIR>
+    <SKTBD_ENGINE_INCLUDES>$(SKTBD_PLATFORM_DIR);$(SKTBD_ENGINE_DIR)\Skateboard\vendor\spdlog\include;$(SKTBD_ENGINE_DIR)\Skateboard\src;$(SKTBD_ENGINE_DIR)\Skateboard\vendor;$(SKTBD_ENGINE_DIR)\Skateboard\vendor\simdjson;$(SKTBD_ENGINE_DIR)\Skateboard\vendor\imgui;$(SKTBD_ENGINE_DIR)\Skateboard\vendor\entt\include;$(SKTBD_ENGINE_DIR)\Skateboard\vendor\glm;$(SKTBD_ENGINE_DIR)\Skateboard\vendor\Box2d\include;$(SKTBD_ENGINE_DIR)\Skateboard\vendor\Jolt\;</SKTBD_ENGINE_INCLUDES>
+    <GAME_APP_DIR>$(SolutionDir)</GAME_APP_DIR>
+    <GAME_EXE_DIR>$(GAME_APP_DIR)bin\$(Configuration)-$(Platform)\GameApp\</GAME_EXE_DIR>
+    <MODULE_EXTENSION_INCLUDES>$(GAME_APP_DIR)skateboard_ext\CMP301EXT\ExtensionProject</MODULE_EXTENSION_INCLUDES>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Label="Globals">
+    <Microsoft_Direct3D_D3D12_D3D12SDKPath>.\Dependencies\</Microsoft_Direct3D_D3D12_D3D12SDKPath>
+    <Microsoft_Direct3D_D3D12_SkipLibraryCopy>false</Microsoft_Direct3D_D3D12_SkipLibraryCopy>
+    <Microsoft_Direct3D_D3D12_SkipDebugLayerCopy>false</Microsoft_Direct3D_D3D12_SkipDebugLayerCopy>
+    <Microsoft_Direct3D_D3D12_SkipIncludeDir>false</Microsoft_Direct3D_D3D12_SkipIncludeDir>
+    <Microsoft_Direct3D_DXC_SkipLibraryCopy>false</Microsoft_Direct3D_DXC_SkipLibraryCopy>
+    <Microsoft_Direct3D_DXC_SkipIncludeDir>false</Microsoft_Direct3D_DXC_SkipIncludeDir>
+    <Microsoft_Direct3D_DXC_CopyLocation>.\Dependencies\</Microsoft_Direct3D_DXC_CopyLocation>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="SKTBD_ENGINE_DIR">
+      <Value>$(SKTBD_ENGINE_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="SKTBD_PLATFORM_DIR">
+      <Value>$(SKTBD_PLATFORM_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SKTBD_ENGINE_INCLUDES">
+      <Value>$(SKTBD_ENGINE_INCLUDES)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="GAME_APP_DIR">
+      <Value>$(GAME_APP_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="GAME_EXE_DIR">
+      <Value>$(GAME_EXE_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="MODULE_EXTENSION_INCLUDES">
+      <Value>$(MODULE_EXTENSION_INCLUDES)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

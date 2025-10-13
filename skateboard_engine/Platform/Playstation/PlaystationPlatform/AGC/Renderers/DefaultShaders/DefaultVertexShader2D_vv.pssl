@@ -1,0 +1,57 @@
+struct VertexInput
+{
+	float3 position;
+	float2 uv;
+};
+
+struct VertexOutput
+{
+	float4 position :	S_POSITION; // Careful here, it's different!!
+	float2 uv :			TEXCOORD0;
+};
+
+struct PassBuffer
+{
+	float4x4 ViewMatrix;
+	float4x4 ProjectionMatrix;
+};
+
+struct WorldBuffer
+{
+	float4x4 transform;
+};
+
+ConstantBuffer gScaleBuffer : register(b2,space0)
+{
+	float2 spriteSize;
+	float2 spriteUvScale;
+};
+
+ConstantBuffer gOffsetBuffer : register(b3, space0)
+{
+	float2 offset;
+}
+
+ConstantBuffer<PassBuffer> gPassBuffer : register(b0, space0);
+ConstantBuffer<WorldBuffer> gWorldBuffer : register(b1, space0);
+RegularBuffer<VertexInput> gVertices; 
+
+SrtSignature gSignature
+{
+	CBV(b0,numDescriptors=4)
+	//CBV(b1),
+	//CBV(b2),
+	//CBV(b3)
+}
+
+[SrtSignature(gSignature)]
+VertexOutput main(uint id : S_VERTEX_ID)
+{
+	VertexOutput output;
+
+	output.position = mul(gWorldBuffer.transform, float4(gVertices[id].position.xy * spriteSize,1.f, 1.f));
+	output.position = mul(gPassBuffer.ViewMatrix, output.position);
+	output.position = mul(gPassBuffer.ProjectionMatrix, output.position);
+	output.uv = gVertices[id].uv*spriteUvScale + offset + clamp(sign(spriteUvScale),-1,0) * spriteUvScale; // to flip the sprite we need to flip the X or Y of the scale respectively that changes the position 00 for our xy as we are now stepping backwards luckily we can fix that by offsetting the sprite by one scale step
+	return output;
+}

@@ -1,0 +1,26 @@
+Before crashing allocation:
+Bytes:	67640
+KB:	67.64
+MB:	0.06764
+GB:	0.00006764
+
+Crashing allocation size:
+Bytes:	262144
+KB:	262.144
+MB:	0.262144
+GB:	0.00026214
+
+Sanitizer error message: allocator is out of memory trying to allocate 0x40000 bytes
+
+Alignment [B]: 16384
+Program Unaligned Size [B]: 2908652 + 895482 + 262144 + 321928 = 4388206 bytes <=> 4.388206 MB
+Program Size [B]: 2916352 + 901120 + 262144 + 327680 = 4407296 bytes <=> 4.407296 MB
+
+Solution:
+https://p.siedev.net/resources/documents/SDK/7.000/C_and_Cpp_standard_libraries/stdlib.html#malloc
+
+- The default allocated fixed heap size is 256KiB. We can increase this by defining the following global variable to a bigger size:
+size_t sceLibcHeapSize = 16 * 1024 * 1024;	// example for 16 MB
+
+- We can also change it to a dynamic heap, that is a heap that will extend when calling for an allocation outside of this range using:
+unsigned int sceLibcHeapExtendedAlloc = 1;
