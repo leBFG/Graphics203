@@ -160,20 +160,20 @@ void TutorialScene::drawCube()
 	// Right face
 	vertices.push_back({ bottomRight, green });
 	vertices.push_back({ backBottomRight, green });
+	vertices.push_back({ topLeft, green });
 	vertices.push_back({ backTopRight, green });
-	vertices.push_back({ topRight, green });
 
 	// Back face
-	vertices.push_back({ backBottomLeft, blue });
 	vertices.push_back({ backBottomRight, blue });
-	vertices.push_back({ backTopLeft, blue });
+	vertices.push_back({ backBottomLeft, blue });
 	vertices.push_back({ backTopRight, blue });
+	vertices.push_back({ backTopLeft, blue });
 
 	// Left face
 	vertices.push_back({ backBottomLeft, yellow });
 	vertices.push_back({ bottomLeft, yellow });
-	vertices.push_back({ topLeft, yellow });
 	vertices.push_back({ backTopLeft, yellow });
+	vertices.push_back({ topLeft, yellow });
 
 	// Top face
 	vertices.push_back({ topLeft, white });
@@ -183,9 +183,9 @@ void TutorialScene::drawCube()
 
 	// Bottom face
 	vertices.push_back({ bottomLeft, darkBlue });
+	vertices.push_back({ bottomRight, darkBlue });
 	vertices.push_back({ backBottomLeft, darkBlue });
 	vertices.push_back({ backBottomRight, darkBlue });
-	vertices.push_back({ bottomRight, darkBlue });
 
 	// Indices
 	for (int i = 0; i < 24;)
