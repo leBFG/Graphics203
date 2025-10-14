@@ -5,14 +5,12 @@
 
 class GameObject {
 public:
-    GameObject() = default;
-    virtual ~GameObject() = default;
+    GameObject();
+    virtual ~GameObject();
 
-    virtual void Update(Skateboard::TimeManager* time) {}
-    virtual void Render(CMP203::Renderer203& renderer) = 0;
+    virtual void Update(Skateboard::TimeManager* time);
+    virtual void Render(CMP203::Renderer203& renderer);
 
-    TransformComponent& GetTransform() { return TransformData; }
 
 protected:
-    TransformComponent TransformData;
 };

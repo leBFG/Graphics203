@@ -127,66 +127,82 @@ void TutorialScene::drawHexFan()
 	Renderer.DrawVertices(vertices.data(), vertices.size(), indices, sizeof(indices)/sizeof(uint32), &idHexFan);
 }
 
-//void TutorialScene::drawCube()
-//{
-//	Renderer.SetTopology(SKTBD_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
-//	std::vector<CMP203::Vertex> vertices;
-//	uint32_t indices[24] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 
-//						13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 };
-//
-//	// Front face
-//	CMP203::Vertex v0, v1, v2, v3;
-//	v0.Position = float3(-1.0f, -1.0f, 0.0f);
-//	v1.Position = float3(1.0f, -1.0f, 0.0f);
-//	v2.Position = float3(-1.0f, 1.0f, 0.0f);
-//	v3.Position = float3(1.0f, 1.0f, 0.0f);
-//	vertices = { v0, v1, v2, v3 };
-//	
-//	// Bottom face
-//	CMP203::Vertex v4, v5, v6, v7;
-//	v4.Position = float3(-1.0f, -1.0f, 0.0f);
-//	v5.Position = float3(1.0f, -1.0f, 0.0f);
-//	v6.Position = float3(1.0f, -1.0f, -1.0f);
-//	v7.Position = float3(-1.0f, -1.0f, -1.0f);
-//	vertices = { v4, v5, v6, v7 };
-//
-//	// Top face
-//	CMP203::Vertex v8, v9, v10, v11;
-//	v8.Position = float3(-1.0f, 1.0f, 0.0f);
-//	v9.Position = float3(1.0f, 1.0f, 0.0f);
-//	v10.Position = float3(1.0f, 1.0f, -1.0f);
-//	v11.Position = float3(-1.0f, 1.0f, -1.0f);
-//
-//	// Left face
-//	CMP203::Vertex v8, v9, v10, v11;
-//	uint32_t indicesTop[4] = { 0, 1, 2, 3 };
-//
-//	v8.Position = float3(-1.0f, 1.0f, 0.0f);
-//	v9.Position = float3(1.0f, 1.0f, 0.0f);
-//	v10.Position = float3(1.0f, 1.0f, -1.0f);
-//	v11.Position = float3(-1.0f, 1.0f, -1.0f);
-//	verticesTop = { v8, v9, v10, v11 };
-//	Renderer.DrawVertices(verticesTop.data(), verticesTop.size(), indicesTop, sizeof(indicesTop) / sizeof(uint32));
-//	
-//	// Top face
-//	CMP203::Vertex v8, v9, v10, v11;
-//	uint32_t indicesTop[4] = { 0, 1, 2, 3 };
-//
-//	v8.Position = float3(-1.0f, 1.0f, 0.0f);
-//	v9.Position = float3(1.0f, 1.0f, 0.0f);
-//	v10.Position = float3(1.0f, 1.0f, -1.0f);
-//	v11.Position = float3(-1.0f, 1.0f, -1.0f);
-//	verticesTop = { v8, v9, v10, v11 };
-//	Renderer.DrawVertices(verticesTop.data(), verticesTop.size(), indicesTop, sizeof(indicesTop) / sizeof(uint32));
-//
-//	glm::mat4 mRotation, mTranslation, mScale;
-//	mTranslation = glm::translate(float3(offset));
-//	mScale = glm::scale(float3(scale, scale, scale));
-//	mRotation = glm::rotate(glm::radians(rotationAngle), float3(rotationAxis));
-//
-//	CMP203::InstanceData idCube;
-//	idCube.World = mTranslation * mRotation * mScale;
-//}
+void TutorialScene::drawCube()
+{
+	Renderer.SetTopology(SKTBD_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
+	std::vector<CMP203::Vertex> vertices;
+	std::vector<uint32_t> indices;
+
+	// Cube vertices
+	float3 bottomLeft = { -1.0f, -1.0f, 1.0f };
+	float3 bottomRight = { 1.0f, -1.0f, 1.0f };
+	float3 topLeft = { -1.0f, 1.0f, 1.0f };
+	float3 topRight = { 1.0f, 1.0f, 1.0f };
+	float3 backBottomLeft = { -1.0f, -1.0f, -1.0f };
+	float3 backBottomRight = { 1.0f, -1.0f, -1.0f };
+	float3 backTopLeft = { -1.0f, 1.0f, -1.0f };
+	float3 backTopRight = { 1.0f, 1.0f, -1.0f };
+
+	// Colours
+	float3 red = { 1.f, 0.f, 0.f };
+	float3 green = { 0.f, 1.f, 0.f };
+	float3 blue = { 0.f, 0.f, 1.f };
+	float3 yellow = { 1.f, 1.f, 0.f };
+	float3 white = { 1.f, 1.f, 1.f };
+	float3 darkBlue = { 0.f, 0.f, 0.5f };
+	
+	// Front face
+	vertices.push_back({ bottomLeft, red });
+	vertices.push_back({ bottomRight, red });
+	vertices.push_back({ topLeft, red });
+	vertices.push_back({ topRight, red });
+
+	// Right face
+	vertices.push_back({ bottomRight, green });
+	vertices.push_back({ backBottomRight, green });
+	vertices.push_back({ backTopRight, green });
+	vertices.push_back({ topRight, green });
+
+	// Back face
+	vertices.push_back({ backBottomLeft, blue });
+	vertices.push_back({ backBottomRight, blue });
+	vertices.push_back({ backTopLeft, blue });
+	vertices.push_back({ backTopRight, blue });
+
+	// Left face
+	vertices.push_back({ backBottomLeft, yellow });
+	vertices.push_back({ bottomLeft, yellow });
+	vertices.push_back({ topLeft, yellow });
+	vertices.push_back({ backTopLeft, yellow });
+
+	// Top face
+	vertices.push_back({ topLeft, white });
+	vertices.push_back({ topRight, white });
+	vertices.push_back({ backTopLeft, white });
+	vertices.push_back({ backTopRight, white });
+
+	// Bottom face
+	vertices.push_back({ bottomLeft, darkBlue });
+	vertices.push_back({ backBottomLeft, darkBlue });
+	vertices.push_back({ backBottomRight, darkBlue });
+	vertices.push_back({ bottomRight, darkBlue });
+
+	// Indices
+	for (int i = 0; i < 24;)
+	{
+		indices.push_back(i);
+		i++;
+	}
+
+	glm::mat4 mRotation, mTranslation, mScale;
+	mTranslation = glm::translate(float3(offset));
+	mScale = glm::scale(float3(scale, scale, scale));
+	mRotation = glm::rotate(glm::radians(rotationAngle), float3(rotationAxis));
+
+	CMP203::InstanceData idCube;
+	idCube.World = mTranslation * mRotation * mScale;
+	Renderer.DrawVertices(vertices.data(), vertices.size(), indices.data(), indices.size(), &idCube);
+}
 
 void TutorialScene::drawDisc() // NOT WORKING
 {
@@ -276,7 +292,7 @@ void TutorialScene::drawRobotArm()
 	mlowerScale = glm::scale(float3(lowerArmScale, lowerArmScale, lowerArmScale));
 	mlowerRotation = glm::rotate(glm::radians(lowerArmRotationAngle), float3(lowerArmRotationAxis));
 	CMP203::InstanceData idLowerArm;
-	idLowerArm.World = idUpperArm.World * mlowerTranslation * mlowerRotation * mlowerScale;
+	idLowerArm.World = idUpperArm.World / mupperScale * mlowerTranslation * mlowerRotation * mlowerScale;
 	Renderer.DrawVertices(verticesLowerArm.data(), verticesLowerArm.size(), indicesLowerArm, sizeof(indicesLowerArm) / sizeof(uint32), &idLowerArm);
 
 	// Hand
@@ -298,7 +314,7 @@ void TutorialScene::drawRobotArm()
 	mhandScale = glm::scale(float3(handScale, handScale, handScale));
 	mhandRotation = glm::rotate(glm::radians(handRotationAngle), float3(handRotationAxis));
 	CMP203::InstanceData idHand;
-	idHand.World = idLowerArm.World * mhandTranslation * mhandRotation * mhandScale;
+	idHand.World = idLowerArm.World / mlowerScale * mhandTranslation * mhandRotation * mhandScale;
 	Renderer.DrawVertices(verticesHand.data(), verticesHand.size(), indicesHand, sizeof(indicesHand) / sizeof(uint32), &idHand);
 }
 
@@ -310,9 +326,9 @@ void TutorialScene::OnRender()
 	//drawSquareTriangleList();
 	//drawSquareTriangleStrip();
 	//drawHexFan();
-	//drawCube();
-	//drawDisc(); // NOT WORKING
-	drawRobotArm();
+	drawCube();
+	//drawDisc(); // NOT WORKING - won't even start :')
+	//drawRobotArm();
 
 	Renderer.End();
 }
@@ -341,7 +357,7 @@ void TutorialScene::OnImGuiRender()
 	ImGui::Separator();
 	ImGui::SliderFloat("Scale", (float*)&scale, 0.1f, 100.f);
 	ImGui::Separator();
-	/*ImGui::Separator();
+	ImGui::Separator();
 	ImGui::Text("Robot Arm Controls");
 	ImGui::Separator();
 	ImGui::SliderFloat3("Upper Arm Position offset", (float*)&armOffset, -5.f, 5.f);
@@ -367,6 +383,6 @@ void TutorialScene::OnImGuiRender()
 	ImGui::SliderFloat("Hand Rotation Angle", (float*)&handRotationAngle, 180.f, -180.f);
 	ImGui::Separator();
 	ImGui::SliderFloat("Hand Scale", (float*)&handScale, 0.1f, 100.f);
-	ImGui::Separator();*/
+	ImGui::Separator();
 	ImGui::End(); 
 }

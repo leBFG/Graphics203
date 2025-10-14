@@ -45,6 +45,6 @@ private:
 	float handRotationAngle = 0;
 	float handScale = 1;
 
-	int discSegments = 3;
+	float discSegments = 3.f;
 	float radius = 2;
 };
