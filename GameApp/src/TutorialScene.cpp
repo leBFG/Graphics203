@@ -133,15 +133,15 @@ void TutorialScene::drawCube()
 	std::vector<CMP203::Vertex> vertices;
 	std::vector<uint32_t> indices;
 
-	// Cube vertices
-	float3 bottomLeft = { -1.0f, -1.0f, 1.0f };
-	float3 bottomRight = { 1.0f, -1.0f, 1.0f };
-	float3 topLeft = { -1.0f, 1.0f, 1.0f };
-	float3 topRight = { 1.0f, 1.0f, 1.0f };
-	float3 backBottomLeft = { -1.0f, -1.0f, -1.0f };
-	float3 backBottomRight = { 1.0f, -1.0f, -1.0f };
-	float3 backTopLeft = { -1.0f, 1.0f, -1.0f };
-	float3 backTopRight = { 1.0f, 1.0f, -1.0f };
+	// Cube vertice positions
+	float3 bottomLeft = { -1.0f, -1.0f, 1.0f };			// 0
+	float3 bottomRight = { 1.0f, -1.0f, 1.0f };			// 1
+	float3 topLeft = { -1.0f, 1.0f, 1.0f };				// 2
+	float3 topRight = { 1.0f, 1.0f, 1.0f };				// 3
+	float3 backBottomLeft = { -1.0f, -1.0f, -1.0f };	// 4
+	float3 backBottomRight = { 1.0f, -1.0f, -1.0f };	// 5
+	float3 backTopLeft = { -1.0f, 1.0f, -1.0f };		// 6
+	float3 backTopRight = { 1.0f, 1.0f, -1.0f };		// 7
 
 	// Colours
 	float3 red = { 1.f, 0.f, 0.f };
@@ -160,7 +160,7 @@ void TutorialScene::drawCube()
 	// Right face
 	vertices.push_back({ bottomRight, green });
 	vertices.push_back({ backBottomRight, green });
-	vertices.push_back({ topLeft, green });
+	vertices.push_back({ topRight, green });
 	vertices.push_back({ backTopRight, green });
 
 	// Back face
@@ -188,11 +188,49 @@ void TutorialScene::drawCube()
 	vertices.push_back({ backBottomRight, darkBlue });
 
 	// Indices
-	for (int i = 0; i < 24;)
+	// // Indices
+	/*for (int i = 0; i < 24;)
 	{
 		indices.push_back(i);
 		i++;
-	}
+	}*/
+
+	// Front face
+	indices.push_back(0);
+	indices.push_back(1);
+	indices.push_back(2);
+	indices.push_back(3);
+
+	// Right face
+	indices.push_back(1);
+	indices.push_back(5);
+	indices.push_back(3);
+	indices.push_back(7);
+
+	// Back face
+	indices.push_back(5);
+	indices.push_back(4);
+	indices.push_back(7);
+	indices.push_back(6);
+
+	// Left face
+	indices.push_back(4);
+	indices.push_back(0);
+	indices.push_back(6);
+	indices.push_back(2);
+
+	// Top face
+	indices.push_back(2);
+	indices.push_back(3);
+	indices.push_back(6);
+	indices.push_back(7);
+
+	// Bottom face
+	indices.push_back(4);
+	indices.push_back(5);
+	indices.push_back(0);
+	indices.push_back(1);
+
 
 	glm::mat4 mRotation, mTranslation, mScale;
 	mTranslation = glm::translate(float3(offset));
