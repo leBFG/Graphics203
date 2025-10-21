@@ -28,7 +28,7 @@ private:
 	glm::float3 offset = { 0, 0, 0 };
 	glm::float3 rotationAxis = { 0, 0, 1 };
 	float rotationAngle = 0;
-	float scale = 1;
+	float scale = 5;
 
 	glm::float3 armOffset = { 0, 0, 0 };
 	glm::float3 armRotationAxis = { 0, 0, 1 };

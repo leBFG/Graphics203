@@ -129,6 +129,7 @@ void TutorialScene::drawHexFan()
 
 void TutorialScene::drawCube()
 {
+	Renderer.SetTopology(SKTBD_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 	std::vector<CMP203::Vertex> vertices;
 	std::vector<uint32_t> indices;
 
@@ -186,6 +187,7 @@ void TutorialScene::drawCube()
 	vertices.push_back({ backBottomLeft, darkBlue });	// 22
 	vertices.push_back({ backBottomRight, darkBlue });	// 23
 
+
 	// Indices
 	// Front face
 	indices.push_back(0);
@@ -228,13 +230,12 @@ void TutorialScene::drawCube()
 	indices.push_back(18);
 
 	// Bottom face
-	indices.push_back(20);
-	indices.push_back(21);
 	indices.push_back(22);
-	indices.push_back(21);
 	indices.push_back(23);
+	indices.push_back(21);
 	indices.push_back(22);
-
+	indices.push_back(21);
+	indices.push_back(20);
 
 	glm::mat4 mRotation, mTranslation, mScale;
 	mTranslation = glm::translate(float3(offset));
