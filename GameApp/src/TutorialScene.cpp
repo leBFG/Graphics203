@@ -129,7 +129,6 @@ void TutorialScene::drawHexFan()
 
 void TutorialScene::drawCube()
 {
-	Renderer.SetTopology(SKTBD_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
 	std::vector<CMP203::Vertex> vertices;
 	std::vector<uint32_t> indices;
 
@@ -152,84 +151,89 @@ void TutorialScene::drawCube()
 	float3 darkBlue = { 0.f, 0.f, 0.5f };
 	
 	// Front face
-	vertices.push_back({ bottomLeft, red });
-	vertices.push_back({ bottomRight, red });
-	vertices.push_back({ topLeft, red });
-	vertices.push_back({ topRight, red });
+	vertices.push_back({ bottomLeft, red });		// 0
+	vertices.push_back({ bottomRight, red });		// 1
+	vertices.push_back({ topLeft, red });			// 2
+	vertices.push_back({ topRight, red });			// 3
 
 	// Right face
-	vertices.push_back({ bottomRight, green });
-	vertices.push_back({ backBottomRight, green });
-	vertices.push_back({ topRight, green });
-	vertices.push_back({ backTopRight, green });
+	vertices.push_back({ bottomRight, green });		// 4
+	vertices.push_back({ backBottomRight, green });	// 5
+	vertices.push_back({ topRight, green });		// 6
+	vertices.push_back({ backTopRight, green });	// 7
 
 	// Back face
-	vertices.push_back({ backBottomRight, blue });
-	vertices.push_back({ backBottomLeft, blue });
-	vertices.push_back({ backTopRight, blue });
-	vertices.push_back({ backTopLeft, blue });
+	vertices.push_back({ backBottomRight, blue });	// 8
+	vertices.push_back({ backBottomLeft, blue });	// 9
+	vertices.push_back({ backTopRight, blue });		// 10
+	vertices.push_back({ backTopLeft, blue });		// 11
 
 	// Left face
-	vertices.push_back({ backBottomLeft, yellow });
-	vertices.push_back({ bottomLeft, yellow });
-	vertices.push_back({ backTopLeft, yellow });
-	vertices.push_back({ topLeft, yellow });
+	vertices.push_back({ backBottomLeft, yellow });	// 12
+	vertices.push_back({ bottomLeft, yellow });		// 13
+	vertices.push_back({ backTopLeft, yellow });	// 14
+	vertices.push_back({ topLeft, yellow });		// 15
 
 	// Top face
-	vertices.push_back({ topLeft, white });
-	vertices.push_back({ topRight, white });
-	vertices.push_back({ backTopLeft, white });
-	vertices.push_back({ backTopRight, white });
+	vertices.push_back({ topLeft, white });			// 16
+	vertices.push_back({ topRight, white });		// 17
+	vertices.push_back({ backTopLeft, white });		// 18
+	vertices.push_back({ backTopRight, white });	// 19
 
 	// Bottom face
-	vertices.push_back({ bottomLeft, darkBlue });
-	vertices.push_back({ bottomRight, darkBlue });
-	vertices.push_back({ backBottomLeft, darkBlue });
-	vertices.push_back({ backBottomRight, darkBlue });
+	vertices.push_back({ bottomLeft, darkBlue });		// 20
+	vertices.push_back({ bottomRight, darkBlue });		// 21
+	vertices.push_back({ backBottomLeft, darkBlue });	// 22
+	vertices.push_back({ backBottomRight, darkBlue });	// 23
 
 	// Indices
-	// // Indices
-	/*for (int i = 0; i < 24;)
-	{
-		indices.push_back(i);
-		i++;
-	}*/
-
 	// Front face
 	indices.push_back(0);
 	indices.push_back(1);
 	indices.push_back(2);
+	indices.push_back(1);
 	indices.push_back(3);
+	indices.push_back(2);
 
 	// Right face
-	indices.push_back(1);
+	indices.push_back(4);
 	indices.push_back(5);
-	indices.push_back(3);
+	indices.push_back(6);
+	indices.push_back(5);
 	indices.push_back(7);
+	indices.push_back(6);
 
 	// Back face
-	indices.push_back(5);
-	indices.push_back(4);
-	indices.push_back(7);
-	indices.push_back(6);
+	indices.push_back(8);
+	indices.push_back(9);
+	indices.push_back(10);
+	indices.push_back(9);
+	indices.push_back(11);
+	indices.push_back(10);
 
 	// Left face
-	indices.push_back(4);
-	indices.push_back(0);
-	indices.push_back(6);
-	indices.push_back(2);
+	indices.push_back(12);
+	indices.push_back(13);
+	indices.push_back(14);
+	indices.push_back(13);
+	indices.push_back(15);
+	indices.push_back(14);
 
 	// Top face
-	indices.push_back(2);
-	indices.push_back(3);
-	indices.push_back(6);
-	indices.push_back(7);
+	indices.push_back(16);
+	indices.push_back(17);
+	indices.push_back(18);
+	indices.push_back(17);
+	indices.push_back(19);
+	indices.push_back(18);
 
 	// Bottom face
-	indices.push_back(4);
-	indices.push_back(5);
-	indices.push_back(0);
-	indices.push_back(1);
+	indices.push_back(20);
+	indices.push_back(21);
+	indices.push_back(22);
+	indices.push_back(21);
+	indices.push_back(23);
+	indices.push_back(22);
 
 
 	glm::mat4 mRotation, mTranslation, mScale;
