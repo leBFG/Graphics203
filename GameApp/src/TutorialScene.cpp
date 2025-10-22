@@ -18,6 +18,7 @@ void TutorialScene::OnHandleInput(TimeManager* time)
 void TutorialScene::OnUpdate(TimeManager* time)
 {
 	Scene::OnUpdate(time);
+	Renderer.SetCameraData(myCamera.matrices);
 }
 
 void TutorialScene::drawTriangle()
@@ -392,6 +393,7 @@ void TutorialScene::OnImGuiRender()
 
 	}
 	ImGui::Separator();
+	// General Controls
 	ImGui::SliderFloat3("Position offset", (float*)&offset, -5.f, 5.f);
 	ImGui::Separator();
 	ImGui::SliderFloat3("Rotation axis", (float*)&rotationAxis, -1.f, 1.f);
@@ -401,7 +403,8 @@ void TutorialScene::OnImGuiRender()
 	ImGui::SliderFloat("Scale", (float*)&scale, 0.1f, 100.f);
 	ImGui::Separator();
 	ImGui::Separator();
-	ImGui::Text("Robot Arm Controls");
+	// Robot Arm Controls
+	/*ImGui::Text("Robot Arm Controls");
 	ImGui::Separator();
 	ImGui::SliderFloat3("Upper Arm Position offset", (float*)&armOffset, -5.f, 5.f);
 	ImGui::Separator();
@@ -426,6 +429,13 @@ void TutorialScene::OnImGuiRender()
 	ImGui::SliderFloat("Hand Rotation Angle", (float*)&handRotationAngle, 180.f, -180.f);
 	ImGui::Separator();
 	ImGui::SliderFloat("Hand Scale", (float*)&handScale, 0.1f, 100.f);
+	ImGui::Separator();*/
+	// Camera ImGui Controls
+	ImGui::Text("Camera Controls");
+	ImGui::Separator();
+	ImGui::SliderFloat3("Camera Position", (float*)&myCamera.position, -50.f, 50.f);
+	ImGui::Separator();
+	ImGui::SliderFloat3("Camera Rotation", (float*)&myCamera.rotation, -180.f, 180.f);
 	ImGui::Separator();
 	ImGui::End(); 
 }

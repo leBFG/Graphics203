@@ -300,6 +300,7 @@ ConvertTexturesToGnf.cmd "$(SCE_PROSPERO_SDK_DIR)" $(SolutionDir) $(OutDir)</Com
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="myCamera.h" />
     <ClInclude Include="src\CMP203\Renderer203.h" />
     <ClInclude Include="src\TutorialScene.h" />
     <ClInclude Include="src\DefaultGameLayer.h" />
@@ -307,6 +308,7 @@ ConvertTexturesToGnf.cmd "$(SCE_PROSPERO_SDK_DIR)" $(SolutionDir) $(OutDir)</Com
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="myCamera.cpp" />
     <ClCompile Include="src\CMP203\Renderer203.cpp" />
     <ClCompile Include="src\GameApp.cpp" />
     <ClCompile Include="src\TutorialScene.cpp" />
