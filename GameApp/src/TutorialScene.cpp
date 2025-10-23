@@ -9,10 +9,32 @@ TutorialScene::TutorialScene(const std::string& name):
 	Scene(name)
 {
 	Renderer.Init();
+	myCamera.Init();
 }
 
 void TutorialScene::OnHandleInput(TimeManager* time)
 {
+	if (Input::IsKeyDown(Keys::sc_w))
+	{
+		myCamera.position += myCamera.forward * myCamera.speed * time->DeltaTime();
+		myCamera.Update();
+	}
+	else if (Input::IsKeyDown(Keys::sc_s))
+	{
+		myCamera.position -= myCamera.forward * myCamera.speed * time->DeltaTime();
+		myCamera.Update();
+	}
+
+	if (Input::IsKeyDown(Keys::sc_d))
+	{
+		myCamera.position += myCamera.right * myCamera.speed * time->DeltaTime();
+		myCamera.Update();
+	}
+	else if (Input::IsKeyDown(Keys::sc_a))
+	{
+		myCamera.position -= myCamera.right * myCamera.speed * time->DeltaTime();
+		myCamera.Update();
+	}
 }
 
 void TutorialScene::OnUpdate(TimeManager* time)
@@ -432,10 +454,22 @@ void TutorialScene::OnImGuiRender()
 	ImGui::Separator();*/
 	// Camera ImGui Controls
 	ImGui::Text("Camera Controls");
+	bool sliderChanged1 = false;
+	bool sliderChanged2 = false;
+	bool sliderChanged3 = false;
 	ImGui::Separator();
-	ImGui::SliderFloat3("Camera Position", (float*)&myCamera.position, -50.f, 50.f);
+	sliderChanged1 = ImGui::SliderFloat3("Camera Position", (float*)&myCamera.position, -50.f, 50.f);
 	ImGui::Separator();
-	ImGui::SliderFloat3("Camera Rotation", (float*)&myCamera.rotation, -180.f, 180.f);
+	sliderChanged2 = ImGui::SliderFloat("Camera Rotation X", (float*)&myCamera.rotation.x, -180.f, 180.f);
 	ImGui::Separator();
+	sliderChanged3 = ImGui::SliderFloat("Camera Rotation Y", (float*)&myCamera.rotation.y, -180.f, 180.f);
+	
 	ImGui::End(); 
+
+	if (sliderChanged1)
+		myCamera.Update();
+	if (sliderChanged2)
+		myCamera.Update();
+	if (sliderChanged3)
+		myCamera.Update();
 }

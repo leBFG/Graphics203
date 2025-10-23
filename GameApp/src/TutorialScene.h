@@ -50,5 +50,7 @@ private:
    float radius = 2;  
 
    myCamera myCamera;
-   int2 lastMousePos = { 0, 0 };
+   glm::float3 camPos = { 0,0,0 };
+   glm::float3 camRotAxis = { 0,1,0 };
+   float camRotate = 0;
 };

@@ -19,5 +19,10 @@ public:
 	float far = 100.0f;
 
 	float speed = 10.0f;
+
+	//float3 getCamPos() { return position; };
+	//float3 getCamRot() { return rotation; };
+	//void setCamPos(float3 newPos);
+	//void setCamRot();
 };
 
