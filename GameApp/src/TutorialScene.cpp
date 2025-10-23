@@ -262,7 +262,7 @@ void TutorialScene::drawCube()
 
 	glm::mat4 mRotation, mTranslation, mScale;
 	mTranslation = glm::translate(float3(offset));
-	mScale = glm::scale(float3(scale, scale, scale));
+	mScale = glm::scale(float3(scale, 3, scale));
 	mRotation = glm::rotate(glm::radians(rotationAngle), float3(rotationAxis));
 
 	CMP203::InstanceData idCube;
