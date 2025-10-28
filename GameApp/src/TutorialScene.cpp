@@ -35,6 +35,26 @@ void TutorialScene::OnHandleInput(TimeManager* time)
 		myCamera.position -= myCamera.right * myCamera.speed * time->DeltaTime();
 		myCamera.Update();
 	}
+
+	if (Input::IsMouseButtonPressed(MouseBtn::mb_RightButton))	{
+		Input::SetMouseVisible(false);
+	}
+	else if (Input::IsMouseButtonReleased(MouseBtn::mb_RightButton))	{
+		Input::SetMouseVisible(true);
+	}
+
+	if (Input::IsMouseButtonDown(MouseBtn::mb_RightButton))
+	{
+		int2 window_centre = (int2)Input::GetWindowSize() / 2;
+		int2 mouse_deltas = Input::GetMousePos() - mousePosOld;
+		
+		myCamera.rotation.y += mouse_deltas.x * time->DeltaTime() * myCamera.speed / 2;
+		myCamera.rotation.x -= mouse_deltas.y * time->DeltaTime() * myCamera.speed / 2;
+		myCamera.Update();
+		Input::SetMousePos(window_centre.x, window_centre.y);
+	}
+
+	mousePosOld = Input::GetMousePos();
 }
 
 void TutorialScene::OnUpdate(TimeManager* time)
