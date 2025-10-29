@@ -10,6 +10,20 @@ TutorialScene::TutorialScene(const std::string& name):
 {
 	Renderer.Init();
 	myCamera.Init();
+
+	SamplerDesc SamplerDesc_Mirror;
+	SamplerDesc SamplerDesc_Clamp;
+	SamplerDesc SamplerDesc_Repeat;
+
+	SamplerDesc_Mirror = CMP203::LinearSampler(SamplerMode_Mirror, SamplerMode_Wrap);
+	SamplerDesc_Clamp = CMP203::LinearSampler(SamplerMode_Clamp, SamplerMode_Clamp);
+	SamplerDesc_Repeat = CMP203::LinearSampler(SamplerMode_Wrap, SamplerMode_Wrap);
+
+	SamplerMirror = ResourceFactory::CreateSampler(SamplerDesc_Mirror, L"MirrorU");
+	SamplerClamp = ResourceFactory::CreateSampler(SamplerDesc_Clamp, L"ClampU");
+	SamplerRepeat = ResourceFactory::CreateSampler(SamplerDesc_Repeat, L"RepeatU");
+
+	AssetManager::LoadTexture(L"assets/stone", "Stone");
 }
 
 void TutorialScene::OnHandleInput(TimeManager* time)
@@ -193,30 +207,37 @@ void TutorialScene::drawCube()
 	float3 yellow = { 1.f, 1.f, 0.f };
 	float3 white = { 1.f, 1.f, 1.f };
 	float3 darkBlue = { 0.f, 0.f, 0.5f };
+
+	// Texture vertice positions
+	float2 textPosA = { 0, 0 };
+	float2 textPosB = { 1, 0 };
+	float2 textPosC = { 0, 1 };
+	float2 textPosD = { 1, 1 };
+	
 	
 	// Front face
-	vertices.push_back({ bottomLeft, red });		// 0
-	vertices.push_back({ bottomRight, red });		// 1
-	vertices.push_back({ topLeft, red });			// 2
-	vertices.push_back({ topRight, red });			// 3
+	vertices.push_back({ bottomLeft, red, textPosC });		// 0
+	vertices.push_back({ bottomRight, red, textPosD });		// 1
+	vertices.push_back({ topLeft, red, textPosA });			// 2
+	vertices.push_back({ topRight, red, textPosB });			// 3
 
 	// Right face
-	vertices.push_back({ bottomRight, green });		// 4
-	vertices.push_back({ backBottomRight, green });	// 5
-	vertices.push_back({ topRight, green });		// 6
-	vertices.push_back({ backTopRight, green });	// 7
+	vertices.push_back({ bottomRight, green, textPosC });		// 4
+	vertices.push_back({ backBottomRight, green, textPosD });	// 5
+	vertices.push_back({ topRight, green, textPosA });		// 6
+	vertices.push_back({ backTopRight, green, textPosB });	// 7
 
 	// Back face
-	vertices.push_back({ backBottomRight, blue });	// 8
-	vertices.push_back({ backBottomLeft, blue });	// 9
-	vertices.push_back({ backTopRight, blue });		// 10
-	vertices.push_back({ backTopLeft, blue });		// 11
+	vertices.push_back({ backBottomRight, blue, backBottomRight });	// 8
+	vertices.push_back({ backBottomLeft, blue, backBottomLeft });	// 9
+	vertices.push_back({ backTopRight, blue, backTopRight });		// 10
+	vertices.push_back({ backTopLeft, blue, backTopLeft });		// 11
 
 	// Left face
-	vertices.push_back({ backBottomLeft, yellow });	// 12
-	vertices.push_back({ bottomLeft, yellow });		// 13
-	vertices.push_back({ backTopLeft, yellow });	// 14
-	vertices.push_back({ topLeft, yellow });		// 15
+	vertices.push_back({ backBottomLeft, yellow, textPosC });	// 12
+	vertices.push_back({ bottomLeft, yellow, textPosD });		// 13
+	vertices.push_back({ backTopLeft, yellow, textPosA });	// 14
+	vertices.push_back({ topLeft, yellow, textPosB });		// 15
 
 	// Top face
 	vertices.push_back({ topLeft, white });			// 16
@@ -287,6 +308,8 @@ void TutorialScene::drawCube()
 
 	CMP203::InstanceData idCube;
 	idCube.World = mTranslation * mRotation * mScale;
+	idCube.TextureIndex = AssetManager::GetTexture("Stone")->GetViewIndex();
+	idCube.SamplerIndex = SamplerRepeat->GetSamplerIndex();
 	Renderer.DrawVertices(vertices.data(), vertices.size(), indices.data(), indices.size(), &idCube);
 }
 

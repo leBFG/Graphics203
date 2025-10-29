@@ -2,6 +2,7 @@
 #include "Skateboard/Scene/Scene.h"  
 #include "CMP203/Renderer203.h"  
 #include "../myCamera.h"
+#include "Skateboard/Assets/AssetManager.h"
 
 class TutorialScene : public Skateboard::Scene {  
 public:  
@@ -51,4 +52,8 @@ private:
 
    myCamera myCamera;
    int2 mousePosOld = { 0, 0 };
+
+   SamplerRef SamplerMirror;
+   SamplerRef SamplerClamp;
+   SamplerRef SamplerRepeat;
 };
