@@ -18,7 +18,7 @@ public:
 	float near = 0.1f;
 	float far = 100.0f;
 
-	float speed = 10.0f;
+	float speed = 40.0f;
 
 	//float3 getCamPos() { return position; };
 	//float3 getCamRot() { return rotation; };
