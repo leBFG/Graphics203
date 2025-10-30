@@ -57,6 +57,9 @@ TutorialScene::TutorialScene(const std::string& name):
 	SamplerRepeat = ResourceFactory::CreateSampler(SamplerDesc_Repeat, L"RepeatU");
 
 	AssetManager::LoadTexture(L"assets/stone", "Stone");
+	AssetManager::LoadTexture(L"assets/Dice", "Dice");
+	AssetManager::LoadTexture(L"assets/crate", "Crate");
+	AssetManager::LoadTexture(L"assets/fsjal", "WeirdFace");
 }
 
 void TutorialScene::OnHandleInput(TimeManager* time)
@@ -472,7 +475,7 @@ void TutorialScene::drawCube()
 
 	CMP203::InstanceData idCube;
 	idCube.World = mTranslation * mRotation * mScale;
-	idCube.TextureIndex = AssetManager::GetTexture("Stone")->GetViewIndex();
+	idCube.TextureIndex = AssetManager::GetTexture("Crate")->GetViewIndex();
 	idCube.SamplerIndex = SamplerRepeat->GetSamplerIndex();
 	Renderer.DrawVertices(vertices.data(), vertices.size(), indices.data(), indices.size(), &idCube);
 }
