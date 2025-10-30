@@ -56,4 +56,6 @@ private:
    SamplerRef SamplerMirror;
    SamplerRef SamplerClamp;
    SamplerRef SamplerRepeat;
+
+   std::vector<CMP203::Light> SceneLights;
 };

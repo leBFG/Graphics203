@@ -9,6 +9,39 @@ TutorialScene::TutorialScene(const std::string& name):
 	Scene(name)
 {
 	Renderer.Init();
+	Renderer.SetAmbientLight(float3(0.4f, 0.3f, 0.3f));
+
+	CMP203::Light DirectionalLight(CMP203::LightType::LightDirectional);
+	CMP203::Light PointLight(CMP203::LightType::LightPoint);
+	CMP203::Light SpotLight(CMP203::LightType::LightSpot);
+
+	DirectionalLight.Type = CMP203::LightType::LightDirectional;
+	DirectionalLight.DiffuseColour = float4(1.f, 1.f, 1.f, 1.f);
+	DirectionalLight.LightDirection = float3(0.f, -1.f, 0.f);
+
+	SpotLight.Type = CMP203::LightType::LightSpot;
+	SpotLight.DiffuseColour = float4(1.f, 1.f, 0.f, 1.f);
+	SpotLight.LightPosition = float3(0.f, -1.f, 0.f);
+	SpotLight.LightDirection = float3(0.f, -1.f, 0.f);
+	SpotLight.ConstantAttenuation = 0.05f;
+	SpotLight.LinearAttenuation = 0.01f;
+	SpotLight.SquareAttenuation = 0.001f;
+	SpotLight.InnerCone = glm::radians(30.f);
+	SpotLight.OuterCone = glm::radians(90.f);
+	SpotLight.FalloffPower = 2.f;
+
+	PointLight.Type = CMP203::LightType::LightPoint;
+	PointLight.DiffuseColour = float4(1.f, 0.f, 0.f, 1.f);
+	PointLight.LightPosition = float3(0.f, -1.f, 0.f);
+	PointLight.ConstantAttenuation = 0.05f;
+	PointLight.LinearAttenuation = 0.01f;
+	PointLight.SquareAttenuation = 0.001f;
+
+	SceneLights.push_back(DirectionalLight);	// Pos 0
+	SceneLights.push_back(PointLight);			// Pos 1
+	SceneLights.push_back(SpotLight);			// Pos 2
+	Renderer.SetLights(SceneLights);
+
 	myCamera.Init();
 
 	SamplerDesc SamplerDesc_Mirror;
@@ -216,40 +249,40 @@ void TutorialScene::drawCube()
 	
 	
 	// Front face
-	vertices.push_back({ bottomLeft, red, textPosC });		// 0
-	vertices.push_back({ bottomRight, red, textPosD });		// 1
-	vertices.push_back({ topLeft, red, textPosA });			// 2
-	vertices.push_back({ topRight, red, textPosB });			// 3
+	vertices.push_back({ bottomLeft, red, textPosC, float3{ 0.f, 0.f, -1.f } });		// 0
+	vertices.push_back({ bottomRight, red, textPosD, float3{ 0.f, 0.f, -1.f } });		// 1
+	vertices.push_back({ topLeft, red, textPosA, float3{ 0.f, 0.f, -1.f } });			// 2
+	vertices.push_back({ topRight, red, textPosB, float3{ 0.f, 0.f, -1.f } });			// 3
 
 	// Right face
-	vertices.push_back({ bottomRight, green, textPosC });		// 4
-	vertices.push_back({ backBottomRight, green, textPosD });	// 5
-	vertices.push_back({ topRight, green, textPosA });		// 6
-	vertices.push_back({ backTopRight, green, textPosB });	// 7
+	vertices.push_back({ bottomRight, green, textPosC, float3{ -1.f, 0.f, 0.f } });		// 4
+	vertices.push_back({ backBottomRight, green, textPosD, float3{ -1.f, 0.f, 0.f } });	// 5
+	vertices.push_back({ topRight, green, textPosA, float3{ -1.f, 0.f, 0.f } });		// 6
+	vertices.push_back({ backTopRight, green, textPosB, float3{ -1.f, 0.f, 0.f } });	// 7
 
 	// Back face
-	vertices.push_back({ backBottomRight, blue, backBottomRight });	// 8
-	vertices.push_back({ backBottomLeft, blue, backBottomLeft });	// 9
-	vertices.push_back({ backTopRight, blue, backTopRight });		// 10
-	vertices.push_back({ backTopLeft, blue, backTopLeft });		// 11
+	vertices.push_back({ backBottomRight, blue, backBottomRight, float3{ 0.f, 0.f, 1.f } });	// 8
+	vertices.push_back({ backBottomLeft, blue, backBottomLeft, float3{ 0.f, 0.f, 1.f } });	// 9
+	vertices.push_back({ backTopRight, blue, backTopRight, float3{ 0.f, 0.f, 1.f } });		// 10
+	vertices.push_back({ backTopLeft, blue, backTopLeft, float3{ 0.f, 0.f, 1.f } });		// 11
 
 	// Left face
-	vertices.push_back({ backBottomLeft, yellow, textPosC });	// 12
-	vertices.push_back({ bottomLeft, yellow, textPosD });		// 13
-	vertices.push_back({ backTopLeft, yellow, textPosA });	// 14
-	vertices.push_back({ topLeft, yellow, textPosB });		// 15
+	vertices.push_back({ backBottomLeft, yellow, textPosC, float3{ 1.f, 0.f, 0.f } });	// 12
+	vertices.push_back({ bottomLeft, yellow, textPosD, float3{ 1.f, 0.f, 0.f } });		// 13
+	vertices.push_back({ backTopLeft, yellow, textPosA, float3{ 1.f, 0.f, 0.f } });	// 14
+	vertices.push_back({ topLeft, yellow, textPosB, float3{ 1.f, 0.f, 0.f } });		// 15
 
 	// Top face
-	vertices.push_back({ topLeft, white });			// 16
-	vertices.push_back({ topRight, white });		// 17
-	vertices.push_back({ backTopLeft, white });		// 18
-	vertices.push_back({ backTopRight, white });	// 19
+	vertices.push_back({ topLeft, white, float3{ 0.f, -1.f, 0.f } });			// 16
+	vertices.push_back({ topRight, white, float3{ 0.f, -1.f, 0.f } });		// 17
+	vertices.push_back({ backTopLeft, white, float3{ 0.f, -1.f, 0.f } });		// 18
+	vertices.push_back({ backTopRight, white, float3{ 0.f, -1.f, 0.f } });	// 19
 
 	// Bottom face
-	vertices.push_back({ bottomLeft, darkBlue });		// 20
-	vertices.push_back({ bottomRight, darkBlue });		// 21
-	vertices.push_back({ backBottomLeft, darkBlue });	// 22
-	vertices.push_back({ backBottomRight, darkBlue });	// 23
+	vertices.push_back({ bottomLeft, darkBlue, float3{ 0.f, 1.f, 0.f } });		// 20
+	vertices.push_back({ bottomRight, darkBlue, float3{ 0.f, 1.f, 0.f } });		// 21
+	vertices.push_back({ backBottomLeft, darkBlue, float3{ 0.f, 1.f, 0.f } });	// 22
+	vertices.push_back({ backBottomRight, darkBlue, float3{ 0.f, 1.f, 0.f } });	// 23
 
 
 	// Indices
@@ -430,6 +463,8 @@ void TutorialScene::drawRobotArm()
 void TutorialScene::OnRender()
 {
 	Renderer.Begin();
+	Renderer.SetPipelineFlags(CMP203::LIT);
+	Renderer.SetDrawDebugNormals(true);
 
 	//drawTriangle();
 	//drawSquareTriangleList();
@@ -465,7 +500,7 @@ void TutorialScene::OnImGuiRender()
 	ImGui::Separator();
 	ImGui::SliderFloat("Rotation Angle", (float*)&rotationAngle, 180.f, -180.f);
 	ImGui::Separator();
-	ImGui::SliderFloat("Scale", (float*)&scale, 0.1f, 100.f);
+	ImGui::SliderFloat("Scale", (float*)&scale, 0.1f, 90.f);
 	ImGui::Separator();
 	ImGui::Separator();
 	// Robot Arm Controls
@@ -506,7 +541,14 @@ void TutorialScene::OnImGuiRender()
 	sliderChanged2 = ImGui::SliderFloat("Camera Rotation X", (float*)&myCamera.rotation.x, -180.f, 180.f);
 	ImGui::Separator();
 	sliderChanged3 = ImGui::SliderFloat("Camera Rotation Y", (float*)&myCamera.rotation.y, -180.f, 180.f);
-	
+	ImGui::Separator();
+	ImGui::Separator();
+	bool pointLightSliderChanged = false;
+	bool spotLightSliderChanged = false;
+	pointLightSliderChanged = ImGui::SliderFloat3("Point Light Position", (float*)&SceneLights[1].LightPosition, -50.f, 50.f);
+	ImGui::Separator();
+	spotLightSliderChanged = ImGui::SliderFloat3("Spot Light Position", (float*)&SceneLights[2].LightPosition, -50.f, 50.f);
+
 	ImGui::End(); 
 
 	if (sliderChanged1)
@@ -515,4 +557,9 @@ void TutorialScene::OnImGuiRender()
 		myCamera.Update();
 	if (sliderChanged3)
 		myCamera.Update();
+
+	if (pointLightSliderChanged)
+		Renderer.SetLights(SceneLights);
+	if (spotLightSliderChanged)
+		Renderer.SetLights(SceneLights);
 }
