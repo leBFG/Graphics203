@@ -23,14 +23,22 @@ private:
    void drawSquareTriangleList();  
    void drawSquareTriangleStrip();  
    void drawHexFan();  
-   void drawCube();  
+   void drawRoom();  
+   void drawCube();
    void drawDisc();  
    void drawRobotArm();  
 
+   // object
    glm::float3 offset = { 0, 0, 0 };  
    glm::float3 rotationAxis = { 0, 0, 1 };  
    float rotationAngle = 0;  
-   float scale = 5;  
+   float scale = 1;  
+
+   //room
+   glm::float3 rOffset = { 0, 0, 0 };
+   glm::float3 rRotationAxis = { 0, 0, 1 };
+   float rRotationAngle = 0;
+   float rScale = 5;
 
    glm::float3 armOffset = { 0, 0, 0 };  
    glm::float3 armRotationAxis = { 0, 0, 1 };  

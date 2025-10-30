@@ -217,7 +217,7 @@ void TutorialScene::drawHexFan()
 	Renderer.DrawVertices(vertices.data(), vertices.size(), indices, sizeof(indices)/sizeof(uint32), &idHexFan);
 }
 
-void TutorialScene::drawCube()
+void TutorialScene::drawRoom()
 {
 	Renderer.SetTopology(SKTBD_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 	std::vector<CMP203::Vertex> vertices;
@@ -335,8 +335,139 @@ void TutorialScene::drawCube()
 	indices.push_back(20);
 
 	glm::mat4 mRotation, mTranslation, mScale;
+	mTranslation = glm::translate(float3(rOffset));
+	mScale = glm::scale(float3(rScale, 3, rScale));
+	mRotation = glm::rotate(glm::radians(rRotationAngle), float3(rRotationAxis));
+
+	CMP203::InstanceData idRoom;
+	idRoom.World = mTranslation * mRotation * mScale;
+	idRoom.TextureIndex = AssetManager::GetTexture("Stone")->GetViewIndex();
+	idRoom.SamplerIndex = SamplerRepeat->GetSamplerIndex();
+	Renderer.DrawVertices(vertices.data(), vertices.size(), indices.data(), indices.size(), &idRoom);
+}
+
+void TutorialScene::drawCube()
+{
+	Renderer.SetTopology(SKTBD_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+	std::vector<CMP203::Vertex> vertices;
+	std::vector<uint32_t> indices;
+
+	// Cube vertice positions
+	float3 bottomLeft = { -1.0f, -1.0f, 1.0f };			// 0
+	float3 bottomRight = { 1.0f, -1.0f, 1.0f };			// 1
+	float3 topLeft = { -1.0f, 1.0f, 1.0f };				// 2
+	float3 topRight = { 1.0f, 1.0f, 1.0f };				// 3
+	float3 backBottomLeft = { -1.0f, -1.0f, -1.0f };	// 4
+	float3 backBottomRight = { 1.0f, -1.0f, -1.0f };	// 5
+	float3 backTopLeft = { -1.0f, 1.0f, -1.0f };		// 6
+	float3 backTopRight = { 1.0f, 1.0f, -1.0f };		// 7
+
+	// Colours
+	float3 red = { 1.f, 0.f, 0.f };
+	float3 green = { 0.f, 1.f, 0.f };
+	float3 blue = { 0.f, 0.f, 1.f };
+	float3 yellow = { 1.f, 1.f, 0.f };
+	float3 white = { 1.f, 1.f, 1.f };
+	float3 darkBlue = { 0.f, 0.f, 0.5f };
+
+	// Texture vertice positions
+	float2 textPosA = { 0, 0 };
+	float2 textPosB = { 1, 0 };
+	float2 textPosC = { 0, 1 };
+	float2 textPosD = { 1, 1 };
+
+
+	// Front face
+	vertices.push_back({ bottomLeft, white, textPosC, float3{ 0.f, 0.f, 1.f } });		// 0
+	vertices.push_back({ bottomRight, white, textPosD, float3{ 0.f, 0.f, 1.f } });		// 1
+	vertices.push_back({ topLeft, white, textPosA, float3{ 0.f, 0.f, 1.f } });			// 2
+	vertices.push_back({ topRight, white, textPosB, float3{ 0.f, 0.f, 1.f } });			// 3
+
+	// Right face
+	vertices.push_back({ bottomRight, white, textPosC, float3{ 1.f, 0.f, 0.f } });		// 4
+	vertices.push_back({ backBottomRight, white, textPosD, float3{ 1.f, 0.f, 0.f } });	// 5
+	vertices.push_back({ topRight, white, textPosA, float3{ 1.f, 0.f, 0.f } });		// 6
+	vertices.push_back({ backTopRight, white, textPosB, float3{ 1.f, 0.f, 0.f } });	// 7
+
+	// Back face
+	vertices.push_back({ backBottomRight, white, backBottomRight, float3{ 0.f, 0.f, -1.f } });	// 8
+	vertices.push_back({ backBottomLeft, white, backBottomLeft, float3{ 0.f, 0.f, -1.f } });	// 9
+	vertices.push_back({ backTopRight, white, backTopRight, float3{ 0.f, 0.f, -1.f } });		// 10
+	vertices.push_back({ backTopLeft, white, backTopLeft, float3{ 0.f, 0.f, -1.f } });		// 11
+
+	// Left face
+	vertices.push_back({ backBottomLeft, white, textPosC, float3{ -1.f, 0.f, 0.f } });	// 12
+	vertices.push_back({ bottomLeft, white, textPosD, float3{ -1.f, 0.f, 0.f } });		// 13
+	vertices.push_back({ backTopLeft, white, textPosA, float3{ -1.f, 0.f, 0.f } });	// 14
+	vertices.push_back({ topLeft, white, textPosB, float3{ -1.f, 0.f, 0.f } });		// 15
+
+	// Top face
+	vertices.push_back({ topLeft, white, float3{ 0.f, 1.f, 0.f } });			// 16
+	vertices.push_back({ topRight, white, float3{ 0.f, 1.f, 0.f } });		// 17
+	vertices.push_back({ backTopLeft, white, float3{ 0.f, 1.f, 0.f } });		// 18
+	vertices.push_back({ backTopRight, white, float3{ 0.f, 1.f, 0.f } });	// 19
+
+	// Bottom face
+	vertices.push_back({ bottomLeft, white, float3{ 0.f, -1.f, 0.f } });		// 20
+	vertices.push_back({ bottomRight, white, float3{ 0.f, -1.f, 0.f } });		// 21
+	vertices.push_back({ backBottomLeft, white, float3{ 0.f, -1.f, 0.f } });	// 22
+	vertices.push_back({ backBottomRight, white, float3{ 0.f, -1.f, 0.f } });	// 23
+
+
+	// Indices
+	// Front face
+	indices.push_back(0);
+	indices.push_back(1);
+	indices.push_back(2);
+	indices.push_back(1);
+	indices.push_back(3);
+	indices.push_back(2);
+
+	// Right face
+	indices.push_back(4);
+	indices.push_back(5);
+	indices.push_back(6);
+	indices.push_back(5);
+	indices.push_back(7);
+	indices.push_back(6);
+
+	// Back face
+	indices.push_back(8);
+	indices.push_back(9);
+	indices.push_back(10);
+	indices.push_back(9);
+	indices.push_back(11);
+	indices.push_back(10);
+
+	// Left face
+	indices.push_back(12);
+	indices.push_back(13);
+	indices.push_back(14);
+	indices.push_back(13);
+	indices.push_back(15);
+	indices.push_back(14);
+
+	// Top face
+	indices.push_back(16);
+	indices.push_back(17);
+	indices.push_back(18);
+	indices.push_back(17);
+	indices.push_back(19);
+	indices.push_back(18);
+
+	// Bottom face
+	indices.push_back(22);
+	indices.push_back(23);
+	indices.push_back(21);
+	indices.push_back(22);
+	indices.push_back(21);
+	indices.push_back(20);
+
+	std::reverse(indices.begin(), indices.end());
+
+	glm::mat4 mRotation, mTranslation, mScale;
 	mTranslation = glm::translate(float3(offset));
-	mScale = glm::scale(float3(scale, 3, scale));
+	mScale = glm::scale(float3(scale, scale, scale));
 	mRotation = glm::rotate(glm::radians(rotationAngle), float3(rotationAxis));
 
 	CMP203::InstanceData idCube;
@@ -470,6 +601,7 @@ void TutorialScene::OnRender()
 	//drawSquareTriangleList();
 	//drawSquareTriangleStrip();
 	//drawHexFan();
+	drawRoom();
 	drawCube();
 	//drawDisc(); // NOT WORKING - won't even start :')
 	//drawRobotArm();
@@ -494,6 +626,7 @@ void TutorialScene::OnImGuiRender()
 	}
 	ImGui::Separator();
 	// General Controls
+	ImGui::Text("General Controls");
 	ImGui::SliderFloat3("Position offset", (float*)&offset, -5.f, 5.f);
 	ImGui::Separator();
 	ImGui::SliderFloat3("Rotation axis", (float*)&rotationAxis, -1.f, 1.f);
@@ -502,6 +635,15 @@ void TutorialScene::OnImGuiRender()
 	ImGui::Separator();
 	ImGui::SliderFloat("Scale", (float*)&scale, 0.1f, 90.f);
 	ImGui::Separator();
+	// Room controls
+	ImGui::Text("Room Controls");
+	ImGui::SliderFloat3("Room Position offset", (float*)&rOffset, -5.f, 5.f);
+	ImGui::Separator();
+	ImGui::SliderFloat3("Room Rotation axis", (float*)&rRotationAxis, -1.f, 1.f);
+	ImGui::Separator();
+	ImGui::SliderFloat("Room Rotation Angle", (float*)&rRotationAngle, 180.f, -180.f);
+	ImGui::Separator();
+	ImGui::SliderFloat("Room Scale", (float*)&rScale, 0.1f, 90.f);
 	ImGui::Separator();
 	// Robot Arm Controls
 	/*ImGui::Text("Robot Arm Controls");
