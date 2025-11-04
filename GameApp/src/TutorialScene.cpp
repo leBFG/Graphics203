@@ -482,7 +482,7 @@ void TutorialScene::drawCube()
 
 void TutorialScene::drawDisc() // NOT WORKING
 {
-	Renderer.SetTopology(SKTBD_PRIMITIVE_TOPOLOGY_TRIANGLEFAN);
+	Renderer.SetTopology(SKTBD_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 	float interval = 2.f * SKTBD_PI / discSegments;
 	float theta = 0.f;
@@ -490,7 +490,7 @@ void TutorialScene::drawDisc() // NOT WORKING
 	std::vector<CMP203::Vertex> vertices;
 	std::vector<uint32_t> indices;
 
-	for (int i = 0; 1 < discSegments; i++)
+	for (int i = 0; i < discSegments; i++)
 	{
 		CMP203::Vertex v0, v1, v2;
 		v0.Position = { 0, 0, 0 };
@@ -605,8 +605,8 @@ void TutorialScene::OnRender()
 	//drawSquareTriangleStrip();
 	//drawHexFan();
 	drawRoom();
-	drawCube();
-	//drawDisc(); // NOT WORKING - won't even start :')
+	//drawCube();
+	drawDisc();
 	//drawRobotArm();
 
 	Renderer.End();
@@ -645,6 +645,11 @@ void TutorialScene::OnImGuiRender()
 	ImGui::Separator();
 	ImGui::SliderFloat("Scale", (float*)&scale, 0.1f, 90.f);
 	ImGui::Separator();
+	//Disc Controls
+	ImGui::Text("Disc Controls");
+	ImGui::SliderFloat("Radius", (float*)&radius, 0.1f, 90.f);
+	ImGui::SliderFloat("Segments", (float*)&discSegments, 0.1f, 90.f);
+
 	// Room controls
 	ImGui::Text("Room Controls");
 	ImGui::SliderFloat3("Room Position offset", (float*)&rOffset, -5.f, 5.f);
