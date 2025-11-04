@@ -18,6 +18,7 @@ public:
 private:  
    CMP203::Renderer203 Renderer;  
    bool bWireframe = false;  
+   bool bLighting = false;
 
    void drawTriangle();  
    void drawSquareTriangleList();  

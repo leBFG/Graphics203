@@ -597,7 +597,6 @@ void TutorialScene::drawRobotArm()
 void TutorialScene::OnRender()
 {
 	Renderer.Begin();
-	Renderer.SetPipelineFlags(CMP203::LIT);
 	Renderer.SetDrawDebugNormals(true);
 
 	//drawTriangle();
@@ -625,7 +624,14 @@ void TutorialScene::OnImGuiRender()
 			Renderer.SetPipelineFlags(CMP203::PipelineFlags::WIREFRAME);
 		else
 			Renderer.UnsetPipelineFlags(CMP203::PipelineFlags::WIREFRAME);
-
+	}
+	ImGui::Separator();
+	if (ImGui::Checkbox("Lighting", &bLighting))
+	{
+		if (bWireframe)
+			Renderer.SetPipelineFlags(CMP203::LIT);
+		else
+			Renderer.UnsetPipelineFlags(CMP203::LIT);
 	}
 	ImGui::Separator();
 	// General Controls
