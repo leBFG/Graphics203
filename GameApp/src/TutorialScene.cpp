@@ -626,13 +626,13 @@ void TutorialScene::OnImGuiRender()
 			Renderer.UnsetPipelineFlags(CMP203::PipelineFlags::WIREFRAME);
 	}
 	ImGui::Separator();
-	if (ImGui::Checkbox("Lighting", &bLighting))
+	/*if (ImGui::Checkbox("Lighting", &bLighting))
 	{
 		if (bWireframe)
-			Renderer.SetPipelineFlags(CMP203::LIT);
+			Renderer.SetPipelineFlags(CMP203::PipelineFlags::LIT);
 		else
-			Renderer.UnsetPipelineFlags(CMP203::LIT);
-	}
+			Renderer.UnsetPipelineFlags(CMP203::PipelineFlags::LIT);
+	}*/
 	ImGui::Separator();
 	// General Controls
 	ImGui::Text("General Controls");
