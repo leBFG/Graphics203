@@ -597,6 +597,7 @@ void TutorialScene::drawRobotArm()
 void TutorialScene::OnRender()
 {
 	Renderer.Begin();
+	Renderer.SetPipelineFlags(CMP203::PipelineFlags::LIT);
 	Renderer.SetDrawDebugNormals(true);
 
 	//drawTriangle();
