@@ -252,40 +252,40 @@ void TutorialScene::drawRoom()
 	
 	
 	// Front face
-	vertices.push_back({ bottomLeft, red, textPosBottomLeft, float3{ 0.f, 0.f, -1.f } });		// 0
-	vertices.push_back({ bottomRight, red, textPosBottomRight, float3{ 0.f, 0.f, -1.f } });		// 1
-	vertices.push_back({ topLeft, red, textPosTopLeft, float3{ 0.f, 0.f, -1.f } });			// 2
-	vertices.push_back({ topRight, red, textPosTopRight, float3{ 0.f, 0.f, -1.f } });			// 3
+	vertices.push_back({ bottomLeft, red, textPosBottomLeft * rScale, float3{ 0.f, 0.f, -1.f } });		// 0
+	vertices.push_back({ bottomRight, red, textPosBottomRight * rScale, float3{ 0.f, 0.f, -1.f } });		// 1
+	vertices.push_back({ topLeft, red, textPosTopLeft * rScale, float3{ 0.f, 0.f, -1.f } });			// 2
+	vertices.push_back({ topRight, red, textPosTopRight * rScale, float3{ 0.f, 0.f, -1.f } });			// 3
 
 	// Right face
-	vertices.push_back({ bottomRight, green, textPosBottomLeft, float3{ -1.f, 0.f, 0.f } });		// 4
-	vertices.push_back({ backBottomRight, green, textPosBottomRight, float3{ -1.f, 0.f, 0.f } });	// 5
-	vertices.push_back({ topRight, green, textPosTopLeft, float3{ -1.f, 0.f, 0.f } });		// 6
-	vertices.push_back({ backTopRight, green, textPosTopRight, float3{ -1.f, 0.f, 0.f } });	// 7
+	vertices.push_back({ bottomRight, green, textPosBottomLeft * rScale, float3{ -1.f, 0.f, 0.f } });		// 4
+	vertices.push_back({ backBottomRight, green, textPosBottomRight * rScale, float3{ -1.f, 0.f, 0.f } });	// 5
+	vertices.push_back({ topRight, green, textPosTopLeft * rScale, float3{ -1.f, 0.f, 0.f } });		// 6
+	vertices.push_back({ backTopRight, green, textPosTopRight * rScale, float3{ -1.f, 0.f, 0.f } });	// 7
 
 	// Back face
-	vertices.push_back({ backBottomRight, blue, textPosBottomLeft, float3{ 0.f, 0.f, 1.f } });	// 8
-	vertices.push_back({ backBottomLeft, blue, textPosBottomRight, float3{ 0.f, 0.f, 1.f } });	// 9
-	vertices.push_back({ backTopRight, blue, textPosTopLeft, float3{ 0.f, 0.f, 1.f } });		// 10
-	vertices.push_back({ backTopLeft, blue, textPosTopRight, float3{ 0.f, 0.f, 1.f } });		// 11
+	vertices.push_back({ backBottomRight, blue, textPosBottomLeft * rScale, float3{ 0.f, 0.f, 1.f } });	// 8
+	vertices.push_back({ backBottomLeft, blue, textPosBottomRight * rScale, float3{ 0.f, 0.f, 1.f } });	// 9
+	vertices.push_back({ backTopRight, blue, textPosTopLeft * rScale, float3{ 0.f, 0.f, 1.f } });		// 10
+	vertices.push_back({ backTopLeft, blue, textPosTopRight * rScale, float3{ 0.f, 0.f, 1.f } });		// 11
 
 	// Left face
-	vertices.push_back({ backBottomLeft, yellow, textPosBottomLeft, float3{ 1.f, 0.f, 0.f } });	// 12
-	vertices.push_back({ bottomLeft, yellow, textPosBottomRight, float3{ 1.f, 0.f, 0.f } });		// 13
-	vertices.push_back({ backTopLeft, yellow, textPosTopLeft, float3{ 1.f, 0.f, 0.f } });	// 14
-	vertices.push_back({ topLeft, yellow, textPosTopRight, float3{ 1.f, 0.f, 0.f } });		// 15
+	vertices.push_back({ backBottomLeft, yellow, textPosBottomLeft * rScale, float3{ 1.f, 0.f, 0.f } });	// 12
+	vertices.push_back({ bottomLeft, yellow, textPosBottomRight * rScale, float3{ 1.f, 0.f, 0.f } });		// 13
+	vertices.push_back({ backTopLeft, yellow, textPosTopLeft * rScale, float3{ 1.f, 0.f, 0.f } });	// 14
+	vertices.push_back({ topLeft, yellow, textPosTopRight * rScale, float3{ 1.f, 0.f, 0.f } });		// 15
 
 	// Top face
-	vertices.push_back({ topLeft, white, textPosBottomLeft, float3{ 0.f, -1.f, 0.f } });			// 16
-	vertices.push_back({ topRight, white, textPosBottomRight, float3{ 0.f, -1.f, 0.f } });		// 17
-	vertices.push_back({ backTopLeft, white, textPosTopLeft, float3{ 0.f, -1.f, 0.f } });		// 18
-	vertices.push_back({ backTopRight, white, textPosTopRight, float3{ 0.f, -1.f, 0.f } });	// 19
+	vertices.push_back({ topLeft, white, textPosBottomLeft * rScale, float3{ 0.f, -1.f, 0.f } });			// 16
+	vertices.push_back({ topRight, white, textPosBottomRight * rScale, float3{ 0.f, -1.f, 0.f } });		// 17
+	vertices.push_back({ backTopLeft, white, textPosTopLeft * rScale, float3{ 0.f, -1.f, 0.f } });		// 18
+	vertices.push_back({ backTopRight, white, textPosTopRight * rScale, float3{ 0.f, -1.f, 0.f } });	// 19
 
 	// Bottom face
-	vertices.push_back({ backBottomLeft, darkBlue, textPosBottomLeft, float3{ 0.f, 1.f, 0.f } });		// 20
-	vertices.push_back({ backBottomRight, darkBlue, textPosBottomRight, float3{ 0.f, 1.f, 0.f } });		// 21
-	vertices.push_back({ bottomLeft, darkBlue, textPosTopLeft, float3{ 0.f, 1.f, 0.f } });	// 22
-	vertices.push_back({ bottomRight, darkBlue, textPosTopRight, float3{ 0.f, 1.f, 0.f } });	// 23
+	vertices.push_back({ backBottomLeft, darkBlue, textPosBottomLeft * rScale, float3{ 0.f, 1.f, 0.f } });		// 20
+	vertices.push_back({ backBottomRight, darkBlue, textPosBottomRight * rScale, float3{ 0.f, 1.f, 0.f } });		// 21
+	vertices.push_back({ bottomLeft, darkBlue, textPosTopLeft * rScale, float3{ 0.f, 1.f, 0.f } });	// 22
+	vertices.push_back({ bottomRight, darkBlue, textPosTopRight * rScale, float3{ 0.f, 1.f, 0.f } });	// 23
 
 
 	// Indices
@@ -345,7 +345,7 @@ void TutorialScene::drawRoom()
 	CMP203::InstanceData idRoom;
 	idRoom.World = mTranslation * mRotation * mScale;
 	idRoom.TextureIndex = AssetManager::GetTexture("Stone")->GetViewIndex();
-	idRoom.SamplerIndex = SamplerRepeat->GetSamplerIndex();
+	idRoom.SamplerIndex = SamplerMirror->GetSamplerIndex();
 	Renderer.DrawVertices(vertices.data(), vertices.size(), indices.data(), indices.size(), &idRoom);
 }
 
@@ -476,7 +476,7 @@ void TutorialScene::drawCube()
 	CMP203::InstanceData idCube;
 	idCube.World = mTranslation * mRotation * mScale;
 	idCube.TextureIndex = AssetManager::GetTexture("Crate")->GetViewIndex();
-	idCube.SamplerIndex = SamplerMirror->GetSamplerIndex();
+	idCube.SamplerIndex = SamplerClamp->GetSamplerIndex();
 	Renderer.DrawVertices(vertices.data(), vertices.size(), indices.data(), indices.size(), &idCube);
 }
 
