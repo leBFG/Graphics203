@@ -605,8 +605,8 @@ void TutorialScene::OnRender()
 	//drawSquareTriangleStrip();
 	//drawHexFan();
 	drawRoom();
-	//drawCube();
-	drawDisc();
+	drawCube();
+	//drawDisc();
 	//drawRobotArm();
 
 	Renderer.End();
